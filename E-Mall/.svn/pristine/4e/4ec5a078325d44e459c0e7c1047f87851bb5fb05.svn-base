@@ -1,0 +1,881 @@
+<%@page import="ustc.sse.water.utils.ImgReadUtil"%>
+<%@page import="ustc.sse.water.pojo.Image"%>
+<%@page import="ustc.sse.water.constants.CommonConstant"%>
+<%@page import="ustc.sse.water.pojo.Buyer"%>
+<%@ page language="java" contentType="text/html;charset=utf-8"
+	pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta>
+<title>E-Mall</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="<%=request.getContextPath()%>/static/css/bootstrap.css"
+	rel="stylesheet">
+<link href="<%=request.getContextPath()%>/static/css/sidebar.css"
+	rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+.sidebar-nav {
+	padding: 9px 0;
+}
+
+@media ( max-width : 980px) {
+	/* Enable use of floated navbar text */
+	.navbar-text.pull-right {
+		float: none;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+</style>
+<link
+	href="<%=request.getContextPath()%>/static/css/bootstrap-responsive.css"
+	rel="stylesheet">
+
+</head>
+<body>
+	<jsp:include page="/WEB-INF/views/main/head.jsp"></jsp:include>
+
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				<div class="well sidebar-nav" style="border: 1px solid #000;">
+					<div class="row-fluid"
+						style="text-align: center; border: 2px solid #000; border-left: 0; border-right: 0; border-top: 0;">
+						<strong>全部商品分类</strong>
+					</div>
+					<!-- 1 start -->
+					<div class="sidelist row-fluid"
+						style="border: 1px solid #fff; height: 26px; border-left: 0; border-right: 0; border-top: 0;">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;图书音像商品</a>
+							</h3></span>
+						<div class="i-list">
+							<dl>
+								<dt>
+									<a href="#">电子书</a>
+								</dt>
+								<dd>
+									<em><a href="#">免费</a></em> <em>|</em> <em><a href="#">小说</a></em>
+									<em>|</em> <em><a href="#">励志与成功</a></em> <em>|</em> <em><a
+										href="#">婚恋/两性</a></em> <em>|</em> <em><a href="#">文学</a></em> <em>|</em>
+									<em><a href="#">经管</a></em> <em>|</em> <em><a href="#">畅读VIP</a></em>
+								</dd>
+								<dt>
+									<a href="#">数字音乐</a>
+								</dt>
+								<dd>
+									<em><a href="#">通俗流行</a></em> <em>|</em> <em><a href="#">古典音乐</a></em>
+									<em>|</em> <em><a href="#">摇滚说唱</a></em> <em>|</em> <em><a
+										href="#">爵士蓝调</a></em> <em>|</em> <em><a href="#">乡村名谣</a></em> <em>|</em>
+									<em><a href="#">有声读物</a></em>
+								</dd>
+								<dt>
+									<a href="#">音像</a>
+								</dt>
+								<dd>
+									<em><a href="#">音乐</a></em> <em>|</em> <em><a href="#">影视</a></em>
+									<em>|</em> <em><a href="#">教育音像</a></em> <em>|</em> <em><a
+										href="#">游戏</a></em>
+								</dd>
+								<dt>
+									<a href="#">文艺</a>
+								</dt>
+								<dd>
+									<em><a href="#">小说</a></em> <em>|</em> <em><a href="#">文学</a></em>
+									<em>|</em> <em><a href="#">青春文学</a></em> <em>|</em> <em><a
+										href="#">传记</a></em> <em>|</em> <em><a href="#">艺术</a></em>
+								</dd>
+								<dt>
+									<a href="#">人文社科</a>
+								</dt>
+								<dd>
+									<em><a href="#">历史</a></em> <em>|</em> <em><a href="#">心理学</a></em>
+									<em>|</em> <em><a href="#">军事/政治</a></em> <em>|</em> <em><a
+										href="#">国学/古籍</a></em> <em>|</em> <em><a href="#">哲学/宗教</a></em> <em>|</em>
+									<em><a href="#">社会科学</a></em>
+								</dd>
+								<dt>
+									<a href="#">生活</a>
+								</dt>
+								<dd>
+									<em><a href="#">家教与育儿</a></em> <em>|</em> <em><a href="#">旅游/地图</a></em>
+									<em>|</em> <em><a href="#">时尚/美妆</a></em> <em>|</em> <em><a
+										href="#">娱乐/休闲</a></em> <em>|</em> <em><a href="#">健身/保健</a></em> <em>|</em>
+									<em><a href="#">烹饪/美食</a></em> <em>|</em> <em><a href="#">家居</a></em>
+									<em>|</em> <em><a href="#">动漫/幽默</a></em>
+								</dd>
+								<dt>
+									<a href="#">科技</a>
+								</dt>
+								<dd>
+									<em><a href="#">科普</a></em> <em>|</em> <em><a href="#">IT</a></em>
+									<em>|</em> <em><a href="#">建筑</a></em> <em>|</em> <em><a
+										href="#">医学</a></em> <em>|</em> <em><a href="#">工业技术</a></em> <em>|</em>
+									<em><a href="#">电子通信</a></em> <em>|</em> <em><a href="#">农林</a></em>
+									<em>|</em> <em><a href="#">科学与自然</a></em>
+								</dd>
+								<dt>
+									<a href="#">少儿</a>
+								</dt>
+								<dd>
+									<em><a href="#">少儿</a></em> <em>|</em> <em><a href="#">0-2岁</a></em>
+									<em>|</em> <em><a href="#">3-6岁</a></em> <em>|</em> <em><a
+										href="#">7-10岁</a></em> <em>|</em> <em><a href="#">11-14岁</a></em>
+								</dd>
+								<dt>
+									<a href="#">教育</a>
+								</dt>
+								<dd>
+									<em><a href="#">教材</a></em> <em>|</em> <em><a href="#">中小学教辅</a></em>
+									<em>|</em> <em><a href="#">考试</a></em> <em>|</em> <em><a
+										href="#">外语学习</a></em>
+								</dd>
+								<dt>
+									<a href="#">其他</a>
+								</dt>
+								<dd>
+									<em><a href="#">英文原版书</a></em> <em>|</em> <em><a href="#">港台图书</a></em>
+									<em>|</em> <em><a href="#">套装书</a></em> <em>|</em> <em><a
+										href="#">杂志/期刊</a></em>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--2 start-->
+					<div class="sidelist row-fluid"
+						style="border: 1px solid #fff; height: 26px; border-left: 0; border-right: 0; border-top: 0;">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;家用电器</a>
+							</h3></span>
+						<div class="i-list">
+							<dl>
+								<dt>
+									<a href="#">大家电</a>
+								</dt>
+								<dd>
+									<em><a href="#">平板电视</a></em> <em>|</em> <em><a href="#">空调</a></em>
+									<em>|</em> <em><a href="#">冰箱</a></em> <em>|</em> <em><a
+										href="#">洗衣机</a></em> <em>|</em> <em><a href="#">家庭影院</a></em> <em>|</em>
+									<em><a href="#">热水器</a></em>
+								</dd>
+								<dt>
+									<a href="#">生活电器</a>
+								</dt>
+								<dd>
+									<em><a href="#">取暖器</a></em> <em>|</em> <em><a href="#">加湿器</a></em>
+									<em>|</em> <em><a href="#">净化器</a></em> <em>|</em> <em><a
+										href="#">饮水器</a></em> <em>|</em> <em><a href="#">吸尘器</a></em> <em>|</em>
+									<em><a href="#">电风扇</a></em> <em>|</em> <em><a href="#">其他生活电器</a></em>
+								</dd>
+								<dt>
+									<a href="#">厨房电器</a>
+								</dt>
+								<dd>
+									<em><a href="#">电压力锅</a></em> <em>|</em> <em><a href="#">电饭煲</a></em>
+									<em>|</em> <em><a href="#">豆浆机</a></em> <em>|</em> <em><a
+										href="#">面包机</a></em> <em>|</em> <em><a href="#">咖啡机</a></em> <em>|</em>
+									<em><a href="#">微波炉</a></em> <em>|</em> <em><a href="#">榨汁机</a></em>
+									<em>|</em> <em><a href="#">电烤箱</a></em> <em>|</em> <em><a
+										href="#">电磁炉</a></em> <em>|</em> <em><a href="#">煮蛋器</a></em> <em>|</em>
+									<em><a href="#">电水壶</a></em> <em>|</em> <em><a href="#">其他厨房电器</a></em>
+								</dd>
+								<dt>
+									<a href="#">个人护理</a>
+								</dt>
+								<dd>
+									<em><a href="#">剃须刀</a></em> <em>|</em> <em><a href="#">脱毛器</a></em>
+									<em>|</em> <em><a href="#">口腔护理</a></em> <em>|</em> <em><a
+										href="#">电吹风</a></em> <em>|</em> <em><a href="#">美容</a></em> <em>|</em>
+									<em><a href="#">美发</a></em> <em>|</em> <em><a href="#">按摩器</a></em>
+									<em>|</em> <em><a href="#">足浴盆</a></em> <em>|</em> <em><a
+										href="#">血压计</a></em> <em>|</em> <em><a href="#">健康秤</a></em> <em>|</em>
+									<em><a href="#">血糖仪</a></em> <em>|</em> <em><a href="#">其他健康电器</a></em>
+								</dd>
+								<dt>
+									<a href="#">五金家装</a>
+								</dt>
+								<dd>
+									<em><a href="#">电动工具</a></em> <em>|</em> <em><a href="#">手动工具</a></em>
+									<em>|</em> <em><a href="#">仪器仪表</a></em> <em>|</em> <em><a
+										href="#">浴霸/排气扇</a></em> <em>|</em> <em><a href="#">灯具</a></em> <em>|</em>
+									<em><a href="#">水槽</a></em> <em>|</em> <em><a href="#">龙头</a></em>
+									<em>|</em> <em><a href="#">花洒</a></em> <em>|</em> <em><a
+										href="#">厨卫五金</a></em> <em>|</em> <em><a href="#">家具五金</a></em> <em>|</em>
+									<em><a href="#">电器开关</a></em> <em>|</em> <em><a href="#">电线电缆</a></em>
+									<em>|</em> <em><a href="#">其他家装电器</a></em>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--3 start-->
+					<div class="sidelist row-fluid"
+						style="border: 1px solid #fff; height: 26px; border-left: 0; border-right: 0; border-top: 0;">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;手机、数码</a>
+							</h3></span>
+						<div class="i-list">
+							<dl>
+								<dt>
+									<a href="#">手机通讯</a>
+								</dt>
+								<dd>
+									<em><a href="#">手机</a></em> <em>|</em> <em><a href="#">对讲机</a></em>
+								</dd>
+								<dt>
+									<a href="#">运营商</a>
+								</dt>
+								<dd>
+									<em><a href="#">购机送费</a></em> <em>|</em> <em><a href="#">0元购机</a></em>
+									<em>|</em> <em><a href="#">选号入网</a></em>
+								</dd>
+								<dt>
+									<a href="#">手机配件</a>
+								</dt>
+								<dd>
+									<em><a href="#">电池</a></em> <em>|</em> <em><a href="#">蓝牙耳机</a></em>
+									<em>|</em> <em><a href="#">充电器/数据线</a></em> <em>|</em> <em><a
+										href="#">贴膜</a></em> <em>|</em> <em><a href="#">存储卡</a></em> <em>|</em>
+									<em><a href="#">保护套</a></em> <em>|</em> <em><a href="#">车载</a></em>
+									<em>|</em> <em><a href="#">iphone配件</a></em> <em>|</em> <em><a
+										href="#">创意配件</a></em> <em>|</em> <em><a href="#">便携/无线音箱</a></em>
+									<em>|</em> <em><a href="#">手机饰品</a></em>
+								</dd>
+								<dt>
+									<a href="#">摄影摄像</a>
+								</dt>
+								<dd>
+									<em><a href="#">数码相机</a></em> <em>|</em> <em><a href="#">单电/微单相机</a></em>
+									<em>|</em> <em><a href="#">单反</a></em> <em>|</em> <em><a
+										href="#">摄像机</a></em> <em>|</em> <em><a href="#">拍立得</a></em> <em>|</em>
+									<em><a href="#">镜头</a></em>
+								</dd>
+								<dt>
+									<a href="#">数码配件</a>
+								</dt>
+								<dd>
+									<em><a href="#">存储卡</a></em> <em>|</em> <em><a href="#">读卡器</a></em>
+									<em>|</em> <em><a href="#">滤镜</a></em> <em>|</em> <em><a
+										href="#">闪光灯/手柄</a></em> <em>|</em> <em><a href="#">相机包</a></em> <em>|</em>
+									<em><a href="#">三脚架/云台</a></em> <em>|</em> <em><a href="#">相机清洁</a></em>
+									<em>|</em> <em><a href="#">相机贴膜</a></em> <em>|</em> <em><a
+										href="#">机身附件</a></em> <em>|</em> <em><a href="#">镜头附件</a></em> <em>|</em>
+									<em><a href="#">电池/充电线</a></em> <em>|</em> <em><a href="#">移动电源</a></em>
+								</dd>
+								<dt>
+									<a href="#">时尚影音</a>
+								</dt>
+								<dd>
+									<em><a href="#">MP3/MP4</a></em> <em>|</em> <em><a
+										href="#">智能设备</a></em> <em>|</em> <em><a href="#">耳机/耳麦</a></em> <em>|</em>
+									<em><a href="#">音箱</a></em> <em>|</em> <em><a href="#">高清播放器</a></em>
+									<em>|</em> <em><a href="#">电纸书</a></em> <em>|</em> <em><a
+										href="#">电子词典</a></em> <em>|</em> <em><a href="#">录音笔</a></em> <em>|</em>
+									<em><a href="#">麦克风</a></em> <em>|</em> <em><a href="#">数码相框</a></em>
+									<em>|</em> <em><a href="#">苹果配件</a></em>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--4 start-->
+					<div class="sidelist row-fluid"
+						style="border: 1px solid #fff; height: 26px; border-left: 0; border-right: 0; border-top: 0;">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;电脑、办公</a>
+							</h3></span>
+						<div class="i-list">
+							<dl>
+								<dt>
+									<a href="#">电脑整机</a>
+								</dt>
+								<dd>
+									<em><a href="#">笔记本</a></em> <em>|</em> <em><a href="#">超极本</a></em>
+									<em>|</em> <em><a href="#">游戏本</a></em> <em>|</em> <em><a
+										href="#">平板电脑</a></em> <em>|</em> <em><a href="#">台式机</a></em> <em>|</em>
+									<em><a href="#">服务器/工作站</a></em>
+								</dd>
+								<dt>
+									<a href="#">电脑配件</a>
+								</dt>
+								<dd>
+									<em><a href="#">CPU</a></em> <em>|</em> <em><a href="#">主板</a></em>
+									<em>|</em> <em><a href="#">显卡</a></em> <em>|</em> <em><a
+										href="#">硬盘</a></em> <em>|</em> <em><a href="#">SSD固态硬盘</a></em> <em>|</em>
+									<em><a href="#">内存</a></em> <em>|</em> <em><a href="#">机箱</a></em>
+									<em>|</em> <em><a href="#">电源</a></em> <em>|</em> <em><a
+										href="#">显示器</a></em> <em>|</em> <em><a href="#">光驱</a></em> <em>|</em>
+									<em><a href="#">声卡</a></em> <em>|</em> <em><a href="#">组装电脑</a></em>
+								</dd>
+								<dt>
+									<a href="#">外设产品</a>
+								</dt>
+								<dd>
+									<em><a href="#">鼠标</a></em> <em>|</em> <em><a href="#">键盘</a></em>
+									<em>|</em> <em><a href="#">游戏设备</a></em> <em>|</em> <em><a
+										href="#">U盘</a></em> <em>|</em> <em><a href="#">移动硬盘</a></em> <em>|</em>
+									<em><a href="#">电视盒</a></em> <em>|</em> <em><a href="#">摄像头</a></em>
+									<em>|</em> <em><a href="#">鼠标垫</a></em> <em>|</em> <em><a
+										href="#">手写板</a></em> <em>|</em> <em><a href="#">电脑清洁</a></em> <em>|</em>
+									<em><a href="#">电脑工具</a></em> <em>|</em> <em><a href="#">插座</a></em>
+								</dd>
+								<dt>
+									<a href="#">网络产品</a>
+								</dt>
+								<dd>
+									<em><a href="#">路由器</a></em> <em>|</em> <em><a href="#">网卡</a></em>
+									<em>|</em> <em><a href="#">交换机</a></em> <em>|</em> <em><a
+										href="#">网络存储</a></em> <em>|</em> <em><a href="#">3G上网</a></em> <em>|</em>
+									<em><a href="#">网络盒子</a></em>
+								</dd>
+								<dt>
+									<a href="#">办公打印</a>
+								</dt>
+								<dd>
+									<em><a href="#">打印机</a></em> <em>|</em> <em><a href="#">一体机</a></em>
+									<em>|</em> <em><a href="#">投影仪</a></em> <em>|</em> <em><a
+										href="#">传真机</a></em> <em>|</em> <em><a href="#">复合机</a></em> <em>|</em>
+									<em><a href="#">碎纸机</a></em> <em>|</em> <em><a href="#">扫描仪</a></em>
+									<em>|</em> <em><a href="#">墨盒</a></em> <em>|</em> <em><a
+										href="#">硒鼓</a></em> <em>|</em> <em><a href="#">墨粉</a></em> <em>|</em>
+									<em><a href="#">色带</a></em>
+								</dd>
+								<dt>
+									<a href="#">服务产品</a>
+								</dt>
+								<dd>
+									<em><a href="#">上门服务</a></em> <em>|</em> <em><a href="#">远程服务</a></em>
+									<em>|</em> <em><a href="#">电脑软件</a></em>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--6 start-->
+					<div class="sidelist row-fluid"
+						style="border: 1px solid #fff; height: 26px; border-left: 0; border-right: 0; border-top: 0;">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;个护化妆</a>
+							</h3></span>
+						<div class="i-list">
+							<dl>
+								<dt>
+									<a href="#">面部护肤</a>
+								</dt>
+								<dd>
+									<em><a href="#">清洁</a></em> <em>|</em> <em><a href="#">护肤</a></em>
+									<em>|</em> <em><a href="#">面膜</a></em> <em>|</em> <em><a
+										href="#">套装</a></em>
+								</dd>
+								<dt>
+									<a href="#">洗发护发</a>
+								</dt>
+								<dd>
+									<em><a href="#">洗发</a></em> <em>|</em> <em><a href="#">护发</a></em>
+									<em>|</em> <em><a href="#">染发</a></em> <em>|</em> <em><a
+										href="#">造型</a></em> <em>|</em> <em><a href="#">假发</a></em> <em>|</em>
+									<em><a href="#">套装</a></em>
+								</dd>
+								<dt>
+									<a href="#">身体护肤</a>
+								</dt>
+								<dd>
+									<em><a href="#">沐浴</a></em> <em>|</em> <em><a href="#">润肤</a></em>
+									<em>|</em> <em><a href="#">颈部</a></em> <em>|</em> <em><a
+										href="#">手足</a></em> <em>|</em> <em><a href="#">纤体塑性</a></em> <em>|</em>
+									<em><a href="#">美胸</a></em> <em>|</em> <em><a href="#">套装</a></em>
+								</dd>
+								<dt>
+									<a href="#">口腔护理</a>
+								</dt>
+								<dd>
+									<em><a href="#">牙膏/牙粉</a></em> <em>|</em> <em><a href="#">牙刷/牙线</a></em>
+									<em>|</em> <em><a href="#">漱口水</a></em>
+								</dd>
+								<dt>
+									<a href="#">香水彩妆</a>
+								</dt>
+								<dd>
+									<em><a href="#">香水</a></em> <em>|</em> <em><a href="#">底妆</a></em>
+									<em>|</em> <em><a href="#">腮红</a></em> <em>|</em> <em><a
+										href="#">眼部</a></em> <em>|</em> <em><a href="#">唇部</a></em> <em>|</em>
+									<em><a href="#">美甲</a></em> <em>|</em> <em><a href="#">美容工具</a></em>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--7 start-->
+					<div class="sidelist row-fluid"
+						style="border: 1px solid #fff; height: 26px; border-left: 0; border-right: 0; border-top: 0;">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;服饰</a>
+							</h3></span>
+						<div class="i-list">
+							<dl>
+								<dt>
+									<a href="#">女装</a>
+								</dt>
+								<dd>
+									<em><a href="#">羽绒服</a></em> <em>|</em> <em><a href="#">棉服</a></em>
+									<em>|</em> <em><a href="#">大衣</a></em> <em>|</em> <em><a
+										href="#">皮衣皮草</a></em> <em>|</em> <em><a href="#">风衣</a></em> <em>|</em>
+									<em><a href="#">针织衫</a></em> <em>|</em> <em><a href="#">卫衣</a></em>
+									<em>|</em> <em><a href="#">西服</a></em> <em>|</em> <em><a
+										href="#">短外套</a></em> <em>|</em> <em><a href="#">T恤</a></em> <em>|</em>
+									<em><a href="#">衬衫</a></em> <em>|</em> <em><a href="#">雪纺纱</a></em>
+									<em>|</em> <em><a href="#">马甲</a></em> <em>|</em> <em><a
+										href="#">牛仔</a></em> <em>|</em> <em><a href="#">打底裤</a></em> <em>|</em>
+									<em><a href="#">休闲裤</a></em> <em>|</em> <em><a href="#">正短裤</a></em>
+									<em>|</em> <em><a href="#">连衣裙</a></em> <em>|</em> <em><a
+										href="#">半身裙</a></em> <em>|</em> <em><a href="#">中老年</a></em> <em>|</em>
+									<em><a href="#">婚纱礼服</a></em> <em>|</em> <em><a href="#">孕妇装</a></em>
+								</dd>
+								<dt>
+									<a href="#">男装</a>
+								</dt>
+								<dd>
+									<em><a href="#">羽绒服</a></em> <em>|</em> <em><a href="#">棉服</a></em>
+									<em>|</em> <em><a href="#">大衣</a></em> <em>|</em> <em><a
+										href="#">皮衣</a></em> <em>|</em> <em><a href="#">风衣</a></em> <em>|</em>
+									<em><a href="#">针织衫</a></em> <em>|</em> <em><a href="#">卫衣</a></em>
+									<em>|</em> <em><a href="#">西服</a></em> <em>|</em> <em><a
+										href="#">外套</a></em> <em>|</em> <em><a href="#">T恤</a></em> <em>|</em>
+									<em><a href="#">衬衫</a></em> <em>|</em> <em><a href="#">夹克</a></em>
+									<em>|</em> <em><a href="#">马甲</a></em> <em>|</em> <em><a
+										href="#">牛仔</a></em> <em>|</em> <em><a href="#">西裤</a></em> <em>|</em>
+									<em><a href="#">休闲裤</a></em> <em>|</em> <em><a href="#">西服套装</a></em>
+									<em>|</em> <em><a href="#">POLO衫</a></em> <em>|</em> <em><a
+										href="#">唐装</a></em> <em>|</em> <em><a href="#">中老年</a></em> <em>|</em>
+									<em><a href="#">工装</a></em>
+								</dd>
+								<dt>
+									<a href="#">配饰</a>
+								</dt>
+								<dd>
+									<em><a href="#">太阳镜</a></em> <em>|</em> <em><a href="#">框镜</a></em>
+									<em>|</em> <em><a href="#">皮带</a></em> <em>|</em> <em><a
+										href="#">围巾</a></em> <em>|</em> <em><a href="#">手套</a></em> <em>|</em>
+									<em><a href="#">帽子</a></em> <em>|</em> <em><a href="#">领带</a></em>
+									<em>|</em> <em><a href="#">袖扣</a></em> <em>|</em> <em><a
+										href="#">其他配饰</a></em>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--8 start-->
+					<div class="sidelist row-fluid"
+						style="border: 1px solid #fff; height: 26px; border-left: 0; border-right: 0; border-top: 0;">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;珠宝、首饰</a>
+							</h3></span>
+						<div class="i-list">
+							<dl>
+								<dt>
+									<a href="#">珠宝首饰</a>
+								</dt>
+								<dd>
+									<em><a href="#">纯金饰品</a></em> <em>|</em> <em><a href="#">金银投资</a></em>
+									<em>|</em> <em><a href="#">银饰</a></em> <em>|</em> <em><a
+										href="#">钻石饰品</a></em> <em>|</em> <em><a href="#">翡翠玉石</a></em> <em>|</em>
+									<em><a href="#">水晶玛瑙</a></em> <em>|</em> <em><a href="#">宝石珍珠</a></em>
+									<em>|</em> <em><a href="#">时尚饰品</a></em>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--9 start-->
+					<div class="sidelist row-fluid"
+						style="border: 1px solid #fff; height: 26px; border-left: 0; border-right: 0; border-top: 0;">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;鞋、包</a>
+							</h3></span>
+						<div class="i-list">
+							<dl>
+								<dt>
+									<a href="#">时尚女鞋</a>
+								</dt>
+								<dd>
+									<em><a href="#">平底鞋</a></em> <em>|</em> <em><a href="#">高跟鞋</a></em>
+									<em>|</em> <em><a href="#">单鞋</a></em> <em>|</em> <em><a
+										href="#">休闲鞋</a></em> <em>|</em> <em><a href="#">凉鞋</a></em> <em>|</em>
+									<em><a href="#">女靴</a></em> <em>|</em> <em><a href="#">雪地靴</a></em>
+									<em>|</em> <em><a href="#">拖鞋</a></em>
+								</dd>
+								<dt>
+									<a href="#">流行男鞋</a>
+								</dt>
+								<dd>
+									<em><a href="#">商务休闲鞋</a></em> <em>|</em> <em><a href="#">正装鞋</a></em>
+									<em>|</em> <em><a href="#">休闲鞋</a></em> <em>|</em> <em><a
+										href="#">凉鞋/沙滩鞋</a></em> <em>|</em> <em><a href="#">男靴</a></em> <em>|</em>
+									<em><a href="#">功能鞋</a></em> <em>|</em> <em><a href="#">拖鞋</a></em>
+								</dd>
+								<dt>
+									<a href="#">潮流女包</a>
+								</dt>
+								<dd>
+									<em><a href="#">钱包/卡包</a></em> <em>|</em> <em><a href="#">手拿包</a></em>
+									<em>|</em> <em><a href="#">单肩包</a></em> <em>|</em> <em><a
+										href="#">双肩包</a></em> <em>|</em> <em><a href="#">手提包</a></em> <em>|</em>
+									<em><a href="#">斜挎包</a></em>
+								</dd>
+								<dt>
+									<a href="#">时尚男包</a>
+								</dt>
+								<dd>
+									<em><a href="#">钱包/卡包</a></em> <em>|</em> <em><a href="#">男士手包</a></em>
+									<em>|</em> <em><a href="#">腰带/礼盒</a></em> <em>|</em> <em><a
+										href="#">商务公文包</a></em> <em>|</em> <em><a href="#">单肩包</a></em> <em>|</em>
+									<em><a href="#">双肩包</a></em>
+								</dd>
+								<dt>
+									<a href="#">功能箱包</a>
+								</dt>
+								<dd>
+									<em><a href="#">电脑数码包</a></em> <em>|</em> <em><a href="#">拉杆箱</a></em>
+									<em>|</em> <em><a href="#">旅行包</a></em> <em>|</em> <em><a
+										href="#">登山包</a></em> <em>|</em> <em><a href="#">书包</a></em>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--10 start-->
+					<div class="sidelist row-fluid"
+						style="border: 1px solid #fff; height: 26px; border-left: 0; border-right: 0; border-top: 0;">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;钟表、奢侈品</a>
+							</h3></span>
+						<div class="i-list">
+							<dl>
+								<dt>
+									<a href="#">奢侈品</a>
+								</dt>
+								<dd>
+									<em><a href="#">GUCCI</a></em> <em>|</em> <em><a href="#">PRADA</a></em>
+									<em>|</em> <em><a href="#">FENDI</a></em> <em>|</em> <em><a
+										href="#">BURBERRY</a></em> <em>|</em> <em><a href="#">MONTBLANC</a></em>
+									<em>|</em> <em><a href="#">ARMANI</a></em> <em>|</em> <em><a
+										href="#">COACH</a></em> <em>|</em> <em><a href="#">RIMOWA</a></em>
+									<em>|</em> <em><a href="#">RAY-BAN</a></em> <em>|</em> <em><a
+										href="#">其他品牌</a></em>
+								</dd>
+								<dt>
+									<a href="#">钟表</a>
+								</dt>
+								<dd>
+									<em><a href="#">瑞士品牌</a></em> <em>|</em> <em><a href="#">国产品牌</a></em>
+									<em>|</em> <em><a href="#">日本品牌</a></em> <em>|</em> <em><a
+										href="#">时尚品牌</a></em> <em>|</em> <em><a href="#">闹钟挂钟</a></em> <em>|</em>
+									<em><a href="#">儿童手表</a></em>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--11 start-->
+					<div class="sidelist row-fluid"
+						style="border: 1px solid #fff; height: 26px; border-left: 0; border-right: 0; border-top: 0;">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;运动</a>
+							</h3></span>
+						<div class="i-list">
+							<dl>
+								<dt>
+									<a href="#">户外鞋服</a>
+								</dt>
+								<dd>
+									<em><a href="#">户外服装</a></em> <em>|</em> <em><a href="#">户外鞋袜</a></em>
+									<em>|</em> <em><a href="#">户外配饰</a></em>
+								</dd>
+								<dt>
+									<a href="#">户外装备</a>
+								</dt>
+								<dd>
+									<em><a href="#">帐篷</a></em> <em>|</em> <em><a href="#">睡袋</a></em>
+									<em>|</em> <em><a href="#">登上攀岩</a></em> <em>|</em> <em><a
+										href="#">户外背包</a></em> <em>|</em> <em><a href="#">户外照明</a></em> <em>|</em>
+									<em><a href="#">户外仪表</a></em>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--12 start-->
+					<div class="sidelist row-fluid"
+						style="border: 1px solid #fff; height: 26px; border-left: 0; border-right: 0; border-top: 0;">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;母婴、玩具、乐器</a>
+							</h3></span>
+						<div class="i-list">
+							<ul>
+								<li><a href="##">桶装</a></li>
+								<li><a href="##">儿童</a></li>
+								<li><a href="##">盒装</a></li>
+								<li><a href="##">咖啡味</a></li>
+								<li><a href="##">草莓味</a></li>
+								<li><a href="##">杏仁味</a></li>
+								<li><a href="##">原味</a></li>
+								<li><a href="##">原味</a></li>
+								<li><a href="##">鸡蛋</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--13 start-->
+					<div class="sidelist row-fluid">
+						<span><h3>
+								<a href="##">&nbsp;&nbsp;&nbsp;食品、饮料</a>
+							</h3></span>
+						<div class="i-list">
+							<dl>
+
+							</dl>
+						</div>
+					</div>
+					<!-- <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li class="sidelist"><a href="#">图书、音响、数字商品</a></li>
+              <li class=""><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul> -->
+				</div>
+				<!-- /.well -->
+			</div>
+			<!--/span-->
+			<div class="span7">
+				<div id="myCarousel" class="carousel slide">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<a href="#" class="thumbnail">
+							 <img src="<%=request.getContextPath()%>/static/images/igdej.jpg"
+								data-src="holder.js/100%x180" alt="Responsive image">
+							</a>
+							<div class="carousel-caption">
+								<h4>足不出户</h4>
+								<p>为人民服务</p>
+							</div>
+						</div>
+						<c:forEach var="item_Adv" items="${sessionScope.Advertisements}">
+							<div class="item">
+								<a href="#" class="thumbnail"> 
+									<img src="<%=request.getContextPath()%>/static/images/${item_Adv.imageURL}"
+										data-src="holder.js/100%x180" alt="Responsive image">
+								</a>
+								<div class="carousel-caption">
+									<p>${item_Adv.profile}</p>
+								</div>
+							</div>
+						</c:forEach>
+					</div>
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+				</div>
+			</div>
+			<!--/span-->
+			<div class="span3">
+				<div class="hero-unit">
+					<h2 align="center">公告</h2>
+					<% int i = 1;%>
+					<c:forEach var="item_Anno" items="${sessionScope.Announcements}" >
+						<p class="text-left">
+							<%=i%>. 
+							<a href="<%=request.getContextPath()%>/announcement?anno_id=${item_Anno.id}" >${item_Anno.title}</a>
+						</p>
+						<%i = i + 1;%> 
+					</c:forEach>
+				</div>
+			</div>
+			<!-- /span -->
+		</div>
+		<!--/row-->
+
+		<div>
+			<h3>
+				<p class="text-info">
+					<strong>今日畅销Top3</strong>
+				</p>
+			</h3>
+		</div>
+
+		<div class="row-fluid">
+			<c:if test="${!empty sessionScope.top3 }">
+				<c:forEach var="top3" items="${sessionScope.top3}">
+					<div class="span4">
+						<a class="thumbnail"
+							onclick="window.location.href='<%=request.getContextPath()%>/toDetail?id=${top3.productId}'">
+							<img data-src="holder.js/100%x180" alt="Responsive image"
+							src="<%=request.getContextPath()%>/${top3.mainImgUrl}"
+							class="img-rounded img-responsive"
+							style="hight: 200px; width: 200px">
+						</a>
+					</div>
+				</c:forEach>
+			</c:if>
+		</div>
+		<!--/row-->
+
+		<div>
+			<h3>
+				<p class="text-info">
+					<strong>商城推荐卖家Top3</strong>
+				</p>
+			</h3>
+		</div>
+		<div class="row-fluid">
+			<c:if test="${!empty sessionScope.mallAdvice }">
+				<c:forEach var="mallAdvice" items="${sessionScope.mallAdvice}">
+					<div class="span4">
+						<a class="thumbnail"
+							onclick="window.location.href='<%=request.getContextPath()%>/toDetail?id=${mallAdvice.shopId}'">
+							<img data-src="holder.js/100%x180" alt="Responsive image"
+							src="<%=request.getContextPath()%>/${mallAdvice.shopImg}"
+							class="img-rounded img-responsive"
+							style="hight: 200px; width: 200px">
+						</a>
+						<div class="caption">
+							<p>${mallAdvice.shopName }
+						</div>
+					</div>
+				</c:forEach>
+			</c:if>
+		</div>
+		<!--/row-->
+		<hr>
+
+		<div class="row-fluid">
+			<div class="span3">
+				<div align="center">
+					<h4>我是新手</h4>
+				</div>
+				<div align="center">
+					<a href="#">购物流程</a>
+				</div>
+				<div align="center">
+					<a href="#">常见问题</a>
+				</div>
+				<div align="center">
+					<a href="#">联系客服</a>
+				</div>
+			</div>
+			<!-- /span -->
+			<div class="span3">
+				<div align="center">
+					<h4>支付方式</h4>
+				</div>
+				<div align="center">
+					<a href="#">货到付款</a>
+				</div>
+				<div align="center">
+					<a href="#">支付宝</a>
+				</div>
+				<div align="center">
+					<a href="#">分期付款</a>
+				</div>
+				<div align="center">
+					<a href="#">邮局汇款</a>
+				</div>
+			</div>
+			<!-- /span -->
+			<div class="span3">
+				<div align="center">
+					<h4>配送方式</h4>
+				</div>
+				<div align="center">
+					<a href="#">上门提货</a>
+				</div>
+				<div align="center">
+					<a href="#">EMS</a>
+				</div>
+				<div align="center">
+					<a href="#">其他快递</a>
+				</div>
+			</div>
+			<!-- /span -->
+			<div class="span3">
+				<div align="center">
+					<h4>售后服务</h4>
+				</div>
+				<div align="center">
+					<a href="#">售后政策</a>
+				</div>
+				<div align="center">
+					<a href="#">退款说明</a>
+				</div>
+				<div align="center">
+					<a href="#">退换货</a>
+				</div>
+				<div align="center">
+					<a href="#">取消订单</a>
+				</div>
+			</div>
+			<!-- /span -->
+		</div>
+
+		<hr>
+
+		<footer>
+		<p class="text-center">&copy; J2ee.ustcsz.edu 2013, All Rights
+			Reserved</p>
+		</footer>
+
+	</div>
+	<!--/.fluid-container-->
+
+	<!-- Le javascript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="<%=request.getContextPath()%>/static/js/jquery.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/bootstrap-transition.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/bootstrap-alert.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/bootstrap-modal.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/bootstrap-dropdown.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/bootstrap-scrollspy.js"></script>
+	<script src="<%=request.getContextPath()%>/static/js/bootstrap-tab.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/bootstrap-tooltip.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/bootstrap-popover.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/bootstrap-button.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/bootstrap-collapse.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/bootstrap-carousel.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/bootstrap-typeahead.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/sidebar-js/jquery-1.3.2.min.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/static/js/sidebar-js/sidebar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+package ustc.sse.water.dao.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Query;
+
+import org.springframework.stereotype.Repository;
+
+import ustc.sse.water.dao.SellerDao;
+import ustc.sse.water.pojo.Product;
+import ustc.sse.water.pojo.Seller;
+import ustc.sse.water.pojo.Shop;
+
+/**
+ * sellerDao实现类. <br>
+ * 类详细说明.
+ * <p>
+ * Copyright: Copyright (c) 2014年1月29日 上午10:03:23
+ * <p>
+ * Company: 中国科学技术大学软件学院
+ * <p>
+ * @author wangytao@mail.ustc.edu.cn
+ * @version 1.0.0
+ */
+
+@Repository("SellerDao")
+public class SellerDaoImpl extends SuperDaoImpl implements SellerDao {
+
+	@Override
+	public void addSeller(Seller seller) {
+		em.persist(seller);
+	}
+
+	@Override
+	public Seller findSeller(String name, String password) {
+		Query query = em.createQuery("from Seller seller where seller.username=?1 and seller.password=?2");
+		query.setParameter(1, name);
+		query.setParameter(2, password);
+		@SuppressWarnings("unchecked")
+		List<Seller> list = query.getResultList();
+		if(!list.isEmpty()){
+			return list.get(0);
+		} else {
+			return null;
+		}
+	}
+	
+	public void addGoods(Product product){
+		em.persist(product);
+	}
+
+	@Override
+	public Seller findByuserName(String username) {
+		Query query = em.createQuery("from Seller seller where seller.username=?1");
+		query.setParameter(1, username);
+		@SuppressWarnings("unchecked")
+		List<Seller> sellers = query.getResultList();
+		if(!sellers.isEmpty()){
+			return sellers.get(0);
+		} else {
+			return null;
+		}
+	}
+
+	@Override
+	public List<Shop> findShopAdvice() {
+		String hql = "from Shop s order by s.shopScore asc";
+		@SuppressWarnings("unchecked")
+		List<Shop> list = em.createQuery(hql).getResultList();
+		List<Shop> shops = new ArrayList<Shop>();
+		shops.addAll(list.size()-6, list);
+		return null;
+	}
+	
+	@Override
+	public Shop findShop(String shopId) {
+		String hql = "from Shop s wher s.shopId=?1";
+		Query query = em.createQuery(hql);
+		query.setParameter(1, shopId);
+		@SuppressWarnings("unchecked")
+		List<Shop> list = query.getResultList();
+		if(!list.isEmpty()){
+			return list.get(0);
+		}else{
+			return null;
+		}
+	}
+
+	@Override
+	public List<Product> getPromotionGoods(long sellerId) {
+		List<Product> products = new ArrayList<Product>();
+		String hql = "from Product p where p.seller.sellerID=?1 order by p.salesNum desc";
+		Query query = em.createQuery(hql);
+		query.setParameter(1,sellerId);
+		@SuppressWarnings("unchecked")
+		List<Product> list = query.getResultList();
+		int size = list.size();
+		size = size<=3? size:3;
+		for (int i = 0; i < size; i++) {
+			products.add(list.get(i));
+		}	
+		return products;
+
+	}
+
+	@Override
+	public List<Product> getNewGoods(long sellerId) {
+		List<Product> products = new ArrayList<Product>();
+		String hql = "from Product p where p.seller.sellerID=?1 order by p.inTime desc";
+		@SuppressWarnings("unchecked")
+		List<Product> list = em.createQuery(hql).setParameter(1, sellerId).getResultList();
+		int size = list.size();
+		size = size<=3? size:3;
+		for (int i = 0; i < size; i++) {
+			products.add(list.get(i));
+		}	
+		return products;
+	}
+
+	@Override
+	public List<Product> getRanking(long sellerId) {
+		List<Product> products = new ArrayList<Product>();
+		String hql = "from Product p where p.seller.sellerID=?1 order by p.salesNum desc";
+		@SuppressWarnings("unchecked")
+		List<Product> list = em.createQuery(hql).setParameter(1, sellerId).getResultList();
+		for (int i = 0; i < list.size(); i++) {
+			products.add(list.get(i));
+		}	
+		return products;
+	}
+
+}

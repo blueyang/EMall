@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link type="text/css" href="<%=request.getContextPath()%>/static/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/css/easyui/easyui.css">
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/css/easyui/icon.css">
+	<script type="text/javascript" src="<%=request.getContextPath()%>/static/js/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/static/js/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/static/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/static/ckfinder/ckfinder.js"></script>
+	<style type="text/css">
+          body {
+			  margin-left:50px;
+			  margin-bottom: 20px;
+			  }
+        </style>
+</head>
+<body>
+	<div style="margin:10px 0;"></div>
+	<form action="<%=request.getContextPath()%>/BuyerController/updateInfo" method="post" enctype="multipart/form-data">
+		<div class="easyui-panel" title="编辑个人信息" style="width:800px;height:auto;padding:10px">
+			<div class="container-fluid hero-unit">
+				<div class="container-fluid">
+					<div class="row-fluid">
+						<div class="span10">
+							<div class="row-fluid">
+								<div class="span3" style="text-align: right">用户昵称:</div>
+								<div class="span9">
+									<input type="text" name="username">
+								</div>
+							</div>
+							<div class="row-fluid">
+								<div class="span3" style="text-align: right">邮箱:</div>
+								<div class="span9">
+									<input type="text" name="usermail">
+								</div>
+							</div>
+							<div class="row-fluid">
+								<div class="span3" style="text-align: right">真实姓名:</div>
+								<div class="span9">
+									<input type="text" name="realname">
+								</div>
+							</div>
+							 <div class="row-fluid">
+						    	<div class="span3">
+						    		<p class="text-right">性别:</p>
+						        </div>
+						        <div class="span9">
+									<label class="radio inline">
+						            	<input type="radio" name="sex" id="radio1" value="option1" checked>
+						                男
+						            </label>
+						            <label class="radio inline">
+						            	<input type="radio" name="sex" id="radio2" value="option2">
+						                女
+						            </label>
+						        </div>
+						    </div>
+							<div class="row-fluid">
+								<div class="span3" style="text-align: right">出生日期:</div>
+								<div class="span9">
+									<input type="text" name="birthday">
+								</div>
+							</div>
+						</div>
+			       </div>
+			       <div class="row-fluid text-center" style="margin-top: 60px;">
+						<input type="submit" class="btn btn-danger" width="200px" value="提交"/>
+					</div>
+			 	</div>
+			 </div>
+		 </div>
+	</form>
+</body>
+</html>

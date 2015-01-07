@@ -1,0 +1,128 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ page isELIgnored="false"%>    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+     href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+<link href="<%=request.getContextPath() %>/static/css/bootstrap.css" rel="stylesheet">
+ 	<script type="text/javascript" src="<%=request.getContextPath() %>/static/js/jquery.js"></script> 
+    <script type="text/javascript" src="<%=request.getContextPath() %>/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath() %>/static/js/bootstrap-datetimepicker.min.js"></script>
+    <style type="text/css">
+		 body {
+            padding-top: 20px;
+            padding-bottom: 40px;
+			padding-right: 20px;
+          }
+    </style>
+</head>
+<body>
+	<ul class="nav nav-tabs">
+     <li class="active"><a href="#selling" data-toggle="tab" >出售中的商品</a></li>
+     <li class=""><a href="#addProduct" data-toggle="tab" >添加商品</a></li>
+	</ul>
+
+  <div class="tab-content">
+     <div class="tab-pane active" id="selling">
+        <div class="hero-unit">
+        	<c:if test="${empty proSell}">
+        		<h2>你的店铺还未上架任何商品！</h2>
+        	</c:if>
+        	<c:if test="${!empty proSell}">
+        		<table class="table">
+	            	<thead>
+	                	<tr>
+	                    	<th>商品</th>
+	                    	<th>商品名</th>
+	                        <th>销量</th>
+	                        <th>库存</th>
+	                        <th>单价</th>
+	                        <th>操作</th>
+	                    </tr>
+	                </thead>
+	                <tbody>
+	                	<c:forEach var="pro" items="${proSell }">
+	                	<tr>
+	                		<td width="150px" height="50px">
+	                			<img alt="" src="<%=request.getContextPath()%>/${pro.mainImgUrl}">
+	                		</td>
+	                    	<td>${pro.productName}</td>
+	                        <td>${pro.salesNum}</td>
+	                        <td>${pro.inventory}</td>
+	                        <td>${pro.price}</td>
+	                        <td>
+	                        	<div class="checkbox">
+								    <label>
+								      <input type="checkbox"> 选择下架
+								    </label>
+								</div>
+	                        </td>
+	                    </tr>
+	                    </c:forEach>
+	                </tbody>
+	            </table>
+	            
+        	</c:if>
+        	
+            <div class="row-fluid" style="text-align:right">
+	        	<form class="form-inline">
+	            	<label class="checkbox">
+	                	<input type="checkbox">全选
+	                </label>
+	                &nbsp;&nbsp;&nbsp;&nbsp;
+	                <input type="submit" value="下架" class="btn btn-danger">
+	            </form>
+        	</div>
+        </div>
+        
+     </div>
+     <div class="tab-pane" id="addProduct">
+     	<div class="hero-unit">
+        	<div class="container-fluid">
+        	<form action="<%=request.getContextPath()%>/SMgrLoader/toproPage">
+                <div class="row-fluid">
+                    <div class="span3"  style="height:450px;">
+                    
+                    	<select multiple="multiple" name="proType">
+                    		<option value="book_page">书籍</option>
+                    		<option value="fruit_page">鲜果</option>
+                        	<option value="shoes">鞋</option>
+                            <option value="bags">包</option>
+                            <option value="clothes">衣服</option>
+                            <option value="digitals">数码3C</option>
+                            <option value="home_appliances">家电</option>
+                        </select>
+                    </div>
+                    <div class="span9">
+                    	<div  style="text-align:center">
+                    		<textarea rows="5" readonly disabled="disabled" style="width: 560px;">
+                    		商城规则
+第一章 概述
+第一条
+为促进开放、透明、分享、责任的新商业文明，保障酱油用户合法权益，维护酱油正常经营秩序，根据《酱油宣言》及《酱油服务协议》、制定本规则。 
+第二条
+酱油规则，是对酱用户增加基本义务或限制基本权利的条款。
+第三条
+违规行为的认定与处理，应基于酱油的事实并严格依规执行。酱油用户在适用规则上一律平等。
+第四条
+用户应遵守国家法律、行政法规、部门规章等规范性文件。对任何涉嫌违反国家法律、行政法规、部门规章等规范性文件的行为，本规则已有规定的，适用本规则；本规则尚无规定的，酱油有权酌情处理。但酱油对用户的处理不免除其应尽的法律责任。用户在酱油的任何行为，应同时遵守与酱油及其关联公司所签订的各项协议。 酱油有权随时变更本规则并在网站上予以公告。若用户不同意相关变更，应立即停止使用酱油的相关服务或产品。酱油有权对用户行为及应适用的规则进行单方认定，并据此处理。 
+                    		</textarea>
+                    	</div>
+                    	<div class="row-fluid" style="text-align: center">
+                    		<input class="btn btn-info btn-large" type="submit" value="同意以上规定，开始添加商品">
+                    	</div>
+                    </div>
+                </div>
+                </from>
+     		</div>
+     	</div>
+     </div>
+  </div>
+</body>
+</html>

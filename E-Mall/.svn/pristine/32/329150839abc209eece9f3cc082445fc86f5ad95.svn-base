@@ -1,0 +1,28 @@
+package ustc.sse.water.dao;
+
+import java.util.List;
+import java.util.Set;
+
+import ustc.sse.water.pojo.Buyer;
+import ustc.sse.water.pojo.Favorites;
+
+/**
+ * 用户DAO接口. <br>
+ * 接口.
+ * <p>
+ * Copyright: Copyright (c) 2013年12月23日 下午5:59:00
+ * <p>
+ * Company: 中国科学技术大学软件学院
+ * <p>
+ * @author wangytao@mail.ustc.edu.cn
+ * @version 1.0.0
+ */
+public interface BuyerDao extends SuperDao{
+	public void addBuyer(Buyer buyer);
+	
+	public void update_Info(Buyer buyer);
+	
+	public List<Favorites> getFavorites(Buyer buyer);
+	
+	public Buyer findBuyer(String buyerName, String password);
+}

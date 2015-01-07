@@ -1,0 +1,189 @@
+package ustc.sse.water.utils;
+
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import com.sun.image.codec.jpeg.JPEGCodec;
+import com.sun.image.codec.jpeg.JPEGImageEncoder;
+
+
+
+
+
+import javax.imageio.ImageIO;
+
+/**
+ * 图片压缩处理. <br>
+ * 用于压缩上传的图片.
+ * <p>
+ * Copyright: Copyright (c) 2014年2月7日 上午11:03:03
+ * <p>
+ * Company: 中国科学技术大学软件学院
+ * <p>
+ * @author wangytao@mail.ustc.edu.cn
+ * @version 1.0.0
+ */
+@SuppressWarnings("restriction")
+public class CompressImg {
+	private File file = null; // 文件对象   
+    private String inputDir; // 输入图路径  
+    private String outputDir; // 输出图路径  
+    private String inputFileName; // 输入图文件名  
+    private String outputFileName; // 输出图文件名  
+    private int outputWidth; // 默认输出图片宽  
+    private int outputHeight; // 默认输出图片高  
+    private boolean proportion = true; // 是否等比缩放标记(默认为等比缩放)
+    
+	public CompressImg(int weight, int height) {
+		this.inputDir = "";
+		this.outputDir = "";
+		this.inputFileName = "";
+		this.outputFileName = "";
+		this.outputWidth = weight;
+		this.outputHeight = height;
+	}
+
+	public File getFile() {
+		return file;
+	}
+
+	public void setFile(File file) {
+		this.file = file;
+	}
+
+	public String getInputDir() {
+		return inputDir;
+	}
+
+	public void setInputDir(String inputDir) {
+		this.inputDir = inputDir;
+	}
+
+	public String getOutputDir() {
+		return outputDir;
+	}
+
+	public void setOutputDir(String outputDir) {
+		this.outputDir = outputDir;
+	}
+
+	public String getInputFileName() {
+		return inputFileName;
+	}
+
+	public void setInputFileName(String inputFileName) {
+		this.inputFileName = inputFileName;
+	}
+
+	public String getOutputFileName() {
+		return outputFileName;
+	}
+
+	public void setOutputFileName(String outputFileName) {
+		this.outputFileName = outputFileName;
+	}
+
+	public int getOutputWidth() {
+		return outputWidth;
+	}
+
+	public void setOutputWidth(int outputWidth) {
+		this.outputWidth = outputWidth;
+	}
+
+	public int getOutputHeight() {
+		return outputHeight;
+	}
+
+	public void setOutputHeight(int outputHeight) {
+		this.outputHeight = outputHeight;
+	}
+
+	public boolean isProportion() {
+		return proportion;
+	}
+
+	public void setProportion(boolean proportion) {
+		this.proportion = proportion;
+	}
+	
+	/**
+	 * @param path
+	 * @return
+	 * 获取文件长度
+	 */
+	public long getImgLen(String path){
+		this.file = new File(path);
+		return this.file.length();
+	}
+	
+	/**
+	 * @return
+	 * 图片压缩 
+	 */
+	public String compressImgMethod(){
+		file = new File(inputDir + inputFileName);
+		if(!file.exists()){
+			return "";
+		}
+		try {
+			Image image = ImageIO.read(file);
+			//判断图片格式
+			if(image.getWidth(null)==-1){
+				System.out.println("can't read, retry");
+			} else {
+				int newWidth;
+				int newHeight;
+				//判断是否为等比缩放
+				if(this.proportion){
+					//为等比缩放计算输出图片的长和宽
+					double widthRate = (double)image.getWidth(null)/(double)outputWidth + 0.1;
+					double heightRate = (double)image.getHeight(null)/(double)outputHeight + 0.1;
+					double rate = widthRate > heightRate ? widthRate : heightRate;
+					newWidth = (int) (((double)image.getWidth(null))/rate);
+					newHeight = (int)(((double)image.getHeight(null))/rate);
+				} else {
+					newHeight = outputHeight;
+					newWidth = outputWidth;
+				}
+				
+				BufferedImage tag = new BufferedImage(newWidth, newHeight, Image.SCALE_SMOOTH);//此类型生成图片质量好
+				tag.getGraphics().drawImage(image.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH), 0, 0, null);
+				FileOutputStream out = new FileOutputStream(outputDir + outputFileName);
+				
+				JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
+				encoder.encode(tag);
+				out.close();
+			}
+		} catch (IOException e) {
+			System.out.println("err");
+			e.printStackTrace();
+		}
+		return "success";
+	}
+    
+	public String compressImgMethod(String inputDir, String outputDir, String inputFileName,
+			String outputFileName){
+		this.inputDir = inputDir;
+		this.outputDir = outputDir;
+		this.inputFileName = inputFileName;
+		this.outputFileName = outputFileName;
+		return compressImgMethod();
+	}
+	
+	public String compressImgMethod(String inputDir, String outputDir, String inputFileName,
+			String outputFileName, int width, int height, boolean gp){
+		this.inputDir = inputDir;
+		this.outputDir = outputDir;
+		this.inputFileName = inputFileName;
+		this.outputFileName = outputFileName;
+		this.outputWidth = width;
+		this.outputHeight = height;
+		this.proportion = gp;
+		return compressImgMethod();
+	}
+    
+}

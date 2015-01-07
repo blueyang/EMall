@@ -1,0 +1,105 @@
+package ustc.sse.water.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import ustc.sse.water.dao.SellerDao;
+import ustc.sse.water.pojo.Product;
+import ustc.sse.water.pojo.Seller;
+import ustc.sse.water.pojo.Shop;
+import ustc.sse.water.service.SellerService;
+
+/**
+ * 卖家service实现类. <br>
+ * 类详细说明.
+ * <p>
+ * Copyright: Copyright (c) 2014年1月29日 上午10:23:32
+ * <p>
+ * Company: 中国科学技术大学软件学院
+ * <p>
+ * @author wangytao@mail.ustc.edu.cn
+ * @version 1.0.0
+ */
+@Transactional
+@Service("SellerService")
+public class SellerServiceImpl implements SellerService {
+
+	private SellerDao sellerDao;
+	
+	/**
+	 * 获取 sellerDao
+	 * @return sellerDao
+	 */
+	public SellerDao getSellerDao() {
+		return sellerDao;
+	}
+
+	/**
+	 * 设置 sellerDao
+	 * @param sellerDao sellerDao
+	 */
+	@Resource(name="SellerDao")
+	public void setSellerDao(SellerDao sellerDao) {
+		this.sellerDao = sellerDao;
+	}
+
+	@Override
+	public void addSeller(Seller seller) {
+		sellerDao.addSeller(seller);
+	}
+
+	@Override
+	public Seller findseller(String name, String password) {
+		Seller seller = sellerDao.findSeller(name, password);
+		if (seller != null) {
+			return seller;
+		} else {
+			return null;
+		}
+	}
+
+	@Override
+	public void addGoods(Product product) {
+		sellerDao.addGoods(product);
+	}
+
+	@Override
+	public Seller findseller(String username) {
+		Seller seller = sellerDao.findByuserName(username);
+		if (seller != null) {
+			return seller;
+		} else {
+			return null;
+		}
+	}
+
+	@Override
+	public List<Shop> getHighScoreShop() {
+		return sellerDao.findShopAdvice();
+	}
+	
+	@Override
+	public Shop findShop(String shopId) {		
+		return sellerDao.findShop(shopId);
+	}
+
+	@Override
+	public List<Product> getPromotionGoods(long sellerId) {
+		return sellerDao.getPromotionGoods(sellerId);
+	}
+
+	@Override
+	public List<Product> getNewGoods(long sellerId) {
+		return sellerDao.getNewGoods(sellerId);
+	}
+
+	@Override
+	public List<Product> getRanking(long sellerId) {
+		return sellerDao.getRanking(sellerId);
+	}
+	
+}

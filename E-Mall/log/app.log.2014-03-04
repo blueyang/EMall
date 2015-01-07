@@ -1,0 +1,813 @@
+2014-03-04 15:34:57 [main:0] - [ INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@983d95: startup date [Tue Mar 04 15:34:57 CST 2014]; root of context hierarchy
+2014-03-04 15:34:58 [main:735] - [ INFO] Loading XML bean definitions from class path resource [spring.xml]
+2014-03-04 15:35:03 [main:6065] - [ INFO] Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-03-04 15:35:04 [main:6494] - [ INFO] Hibernate Annotations 3.5.6-Final
+2014-03-04 15:35:04 [main:6610] - [ INFO] Hibernate 3.5.6-Final
+2014-03-04 15:35:04 [main:6613] - [ INFO] hibernate.properties not found
+2014-03-04 15:35:04 [main:6646] - [ INFO] Bytecode provider name : javassist
+2014-03-04 15:35:04 [main:6666] - [ INFO] using JDK 1.4 java.sql.Timestamp handling
+2014-03-04 15:35:05 [main:7621] - [ INFO] Hibernate Commons Annotations 3.2.0.Final
+2014-03-04 15:35:05 [main:7692] - [ INFO] Hibernate EntityManager 3.5.6-Final
+2014-03-04 15:35:05 [main:7799] - [ INFO] Processing PersistenceUnitInfo [
+	name: default
+	...]
+2014-03-04 15:35:06 [main:8878] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Addr
+2014-03-04 15:35:06 [main:9000] - [ INFO] Bind entity ustc.sse.water.pojo.Addr on table Addr
+2014-03-04 15:35:06 [main:9182] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Admin
+2014-03-04 15:35:06 [main:9183] - [ INFO] Bind entity ustc.sse.water.pojo.Admin on table Admin
+2014-03-04 15:35:06 [main:9185] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Advertisement
+2014-03-04 15:35:06 [main:9185] - [ INFO] Bind entity ustc.sse.water.pojo.Advertisement on table Advertisement
+2014-03-04 15:35:06 [main:9187] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.BasketItem
+2014-03-04 15:35:06 [main:9188] - [ INFO] Bind entity ustc.sse.water.pojo.BasketItem on table BasketItem
+2014-03-04 15:35:06 [main:9209] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Buyer
+2014-03-04 15:35:06 [main:9210] - [ INFO] Bind entity ustc.sse.water.pojo.Buyer on table Buyer
+2014-03-04 15:35:06 [main:9306] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Buyer1
+2014-03-04 15:35:06 [main:9306] - [ INFO] Bind entity ustc.sse.water.pojo.Buyer1 on table td_mall_buyer
+2014-03-04 15:35:06 [main:9308] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Complaint
+2014-03-04 15:35:06 [main:9308] - [ INFO] Bind entity ustc.sse.water.pojo.Complaint on table Complaint
+2014-03-04 15:35:06 [main:9315] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Evaluate
+2014-03-04 15:35:06 [main:9326] - [ INFO] Bind entity ustc.sse.water.pojo.Evaluate on table Evaluate
+2014-03-04 15:35:06 [main:9334] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Favorites
+2014-03-04 15:35:06 [main:9334] - [ INFO] Bind entity ustc.sse.water.pojo.Favorites on table Favorites
+2014-03-04 15:35:06 [main:9337] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Product
+2014-03-04 15:35:06 [main:9337] - [ INFO] Bind entity ustc.sse.water.pojo.Product on table Product
+2014-03-04 15:35:06 [main:9349] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.FruitGoods
+2014-03-04 15:35:06 [main:9350] - [ INFO] Bind entity ustc.sse.water.pojo.FruitGoods on table FruitGoods
+2014-03-04 15:35:07 [main:9393] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Image
+2014-03-04 15:35:07 [main:9394] - [ INFO] Bind entity ustc.sse.water.pojo.Image on table Image
+2014-03-04 15:35:07 [main:9397] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.OrderItem
+2014-03-04 15:35:07 [main:9397] - [ INFO] Bind entity ustc.sse.water.pojo.OrderItem on table OrderItem
+2014-03-04 15:35:07 [main:9410] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.ProductType
+2014-03-04 15:35:07 [main:9410] - [ INFO] Bind entity ustc.sse.water.pojo.ProductType on table ProductType
+2014-03-04 15:35:07 [main:9415] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Seller
+2014-03-04 15:35:07 [main:9416] - [ INFO] Bind entity ustc.sse.water.pojo.Seller on table Seller
+2014-03-04 15:35:07 [main:9432] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Shop
+2014-03-04 15:35:07 [main:9432] - [ INFO] Bind entity ustc.sse.water.pojo.Shop on table Shop
+2014-03-04 15:35:07 [main:9665] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.complaints -> Complaint
+2014-03-04 15:35:07 [main:9667] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.addrs -> Addr
+2014-03-04 15:35:07 [main:9669] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.basket -> BasketItem
+2014-03-04 15:35:07 [main:9669] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.favorites -> Favorites
+2014-03-04 15:35:07 [main:9669] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.orders -> OrderItem
+2014-03-04 15:35:07 [main:9670] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.basketItems -> BasketItem
+2014-03-04 15:35:07 [main:9670] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.images -> Image
+2014-03-04 15:35:07 [main:9670] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.orderItems -> OrderItem
+2014-03-04 15:35:07 [main:9676] - [ INFO] Mapping collection: ustc.sse.water.pojo.ProductType.childTypes -> ProductType
+2014-03-04 15:35:07 [main:9676] - [ INFO] Mapping collection: ustc.sse.water.pojo.Seller.products -> Product
+2014-03-04 15:35:07 [main:9679] - [ INFO] Hibernate Validator not found: ignoring
+2014-03-04 15:35:07 [main:9810] - [ INFO] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2014-03-04 15:35:07 [main:9836] - [ INFO] Initializing connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-03-04 15:35:07 [main:9844] - [ INFO] Using provided datasource
+2014-03-04 15:35:13 [main:15574] - [ INFO] RDBMS: MySQL, version: 5.6.14-enterprise-commercial-advanced
+2014-03-04 15:35:13 [main:15574] - [ INFO] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.24 ( Revision: ${bzr.revision-id} )
+2014-03-04 15:35:13 [main:15750] - [ INFO] Using dialect: org.hibernate.dialect.MySQL5Dialect
+2014-03-04 15:35:13 [main:15795] - [ INFO] Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+2014-03-04 15:35:13 [main:15814] - [ INFO] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2014-03-04 15:35:13 [main:15814] - [ INFO] Automatic flush during beforeCompletion(): disabled
+2014-03-04 15:35:13 [main:15814] - [ INFO] Automatic session close at end of transaction: disabled
+2014-03-04 15:35:13 [main:15814] - [ INFO] JDBC batch size: 10
+2014-03-04 15:35:13 [main:15814] - [ INFO] JDBC batch updates for versioned data: disabled
+2014-03-04 15:35:13 [main:15823] - [ INFO] Scrollable result sets: enabled
+2014-03-04 15:35:13 [main:15824] - [ INFO] JDBC3 getGeneratedKeys(): enabled
+2014-03-04 15:35:13 [main:15824] - [ INFO] JDBC result set fetch size: 18
+2014-03-04 15:35:13 [main:15824] - [ INFO] Connection release mode: auto
+2014-03-04 15:35:13 [main:15838] - [ INFO] Maximum outer join fetch depth: 3
+2014-03-04 15:35:13 [main:15838] - [ INFO] Default batch fetch size: 1
+2014-03-04 15:35:13 [main:15838] - [ INFO] Generate SQL with comments: disabled
+2014-03-04 15:35:13 [main:15838] - [ INFO] Order SQL updates by primary key: disabled
+2014-03-04 15:35:13 [main:15838] - [ INFO] Order SQL inserts for batching: disabled
+2014-03-04 15:35:13 [main:15838] - [ INFO] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2014-03-04 15:35:13 [main:15859] - [ INFO] Using ASTQueryTranslatorFactory
+2014-03-04 15:35:13 [main:15859] - [ INFO] Query language substitutions: {}
+2014-03-04 15:35:13 [main:15859] - [ INFO] JPA-QL strict compliance: enabled
+2014-03-04 15:35:13 [main:15859] - [ INFO] Second-level cache: enabled
+2014-03-04 15:35:13 [main:15859] - [ INFO] Query cache: disabled
+2014-03-04 15:35:13 [main:15859] - [ INFO] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2014-03-04 15:35:13 [main:15860] - [ INFO] Optimize cache for minimal puts: disabled
+2014-03-04 15:35:13 [main:15860] - [ INFO] Structured second-level cache entries: disabled
+2014-03-04 15:35:13 [main:15871] - [ INFO] Echoing all SQL to stdout
+2014-03-04 15:35:13 [main:15873] - [ INFO] Statistics: disabled
+2014-03-04 15:35:13 [main:15873] - [ INFO] Deleted entity synthetic identifier rollback: disabled
+2014-03-04 15:35:13 [main:15873] - [ INFO] Default entity-mode: pojo
+2014-03-04 15:35:13 [main:15873] - [ INFO] Named query checking : enabled
+2014-03-04 15:35:13 [main:15873] - [ INFO] Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+2014-03-04 15:35:13 [main:16056] - [ INFO] building session factory
+2014-03-04 15:35:14 [main:17309] - [ INFO] Not binding factory to JNDI, no JNDI name configured
+2014-03-04 15:35:14 [main:17353] - [ INFO] Running hbm2ddl schema update
+2014-03-04 15:35:14 [main:17353] - [ INFO] fetching database metadata
+2014-03-04 15:35:14 [main:17356] - [ INFO] updating schema
+2014-03-04 15:35:17 [main:19579] - [ INFO] table found: emall.addr
+2014-03-04 15:35:17 [main:19579] - [ INFO] columns: [id, blanket, flag, area, street, buyer, telnumber, postcode, receivename]
+2014-03-04 15:35:17 [main:19579] - [ INFO] foreign keys: [fk1f1011ffec641d]
+2014-03-04 15:35:17 [main:19579] - [ INFO] indexes: [primary, fk1f1011ffec641d]
+2014-03-04 15:35:17 [main:19824] - [ INFO] table found: emall.admin
+2014-03-04 15:35:17 [main:19824] - [ INFO] columns: [admin, password]
+2014-03-04 15:35:17 [main:19824] - [ INFO] foreign keys: []
+2014-03-04 15:35:17 [main:19825] - [ INFO] indexes: [primary]
+2014-03-04 15:35:17 [main:19915] - [ INFO] table found: emall.advertisement
+2014-03-04 15:35:17 [main:19915] - [ INFO] columns: [id, advertisementurl, imageurl]
+2014-03-04 15:35:17 [main:19915] - [ INFO] foreign keys: []
+2014-03-04 15:35:17 [main:19915] - [ INFO] indexes: [primary]
+2014-03-04 15:35:17 [main:20039] - [ INFO] table found: emall.basketitem
+2014-03-04 15:35:17 [main:20039] - [ INFO] columns: [buyer_id, id, addcount, product_id, productillustration]
+2014-03-04 15:35:17 [main:20039] - [ INFO] foreign keys: [fka21e3219bffb9191, fka21e3219ef29a651]
+2014-03-04 15:35:17 [main:20039] - [ INFO] indexes: [fka21e3219bffb9191, primary, fka21e3219ef29a651]
+2014-03-04 15:35:17 [main:20167] - [ INFO] table found: emall.buyer
+2014-03-04 15:35:17 [main:20167] - [ INFO] columns: [birthday, buyername, localaddr, sex, truename, registertime, buyerid, password, buyerscore, username, email, identification, telnum, account, buyercredit, buyerrate, idflag]
+2014-03-04 15:35:17 [main:20167] - [ INFO] foreign keys: []
+2014-03-04 15:35:17 [main:20167] - [ INFO] indexes: [primary]
+2014-03-04 15:35:17 [main:20340] - [ INFO] table found: emall.complaint
+2014-03-04 15:35:17 [main:20340] - [ INFO] columns: [buyer_id, content, id, orderitem_id, figure, posttime]
+2014-03-04 15:35:17 [main:20340] - [ INFO] foreign keys: [fk23d11c8b6324b71, fk23d11c8bbffb9191]
+2014-03-04 15:35:17 [main:20341] - [ INFO] indexes: [fk23d11c8b6324b71, primary, fk23d11c8bbffb9191]
+2014-03-04 15:35:18 [main:20434] - [ INFO] table found: emall.evaluate
+2014-03-04 15:35:18 [main:20434] - [ INFO] columns: [id, orderitem_id, shopevaluation, posttime, producteval]
+2014-03-04 15:35:18 [main:20434] - [ INFO] foreign keys: [fkd7f10b96324b71]
+2014-03-04 15:35:18 [main:20434] - [ INFO] indexes: [fkd7f10b96324b71, primary]
+2014-03-04 15:35:18 [main:20509] - [ INFO] table found: emall.favorites
+2014-03-04 15:35:18 [main:20509] - [ INFO] columns: [buyer_id, id, productorshop, productorshop_id]
+2014-03-04 15:35:18 [main:20509] - [ INFO] foreign keys: [fkd098a37bffb9191]
+2014-03-04 15:35:18 [main:20509] - [ INFO] indexes: [primary, fkd098a37bffb9191]
+2014-03-04 15:35:18 [main:20629] - [ INFO] table found: emall.fruitgoods
+2014-03-04 15:35:18 [main:20630] - [ INFO] columns: [fruitid, fruitlife, weight, productdate, isorganic, factoryaddr, packagestyle, storemethod, origin, additive, specifications, factoryname, factorytel, harvestmonth, ingredient]
+2014-03-04 15:35:18 [main:20630] - [ INFO] foreign keys: [fkc8f4fbc263932815]
+2014-03-04 15:35:18 [main:20630] - [ INFO] indexes: [fkc8f4fbc263932815, primary]
+2014-03-04 15:35:18 [main:20722] - [ INFO] table found: emall.image
+2014-03-04 15:35:18 [main:20723] - [ INFO] columns: [product_id, image_url, imageid]
+2014-03-04 15:35:18 [main:20723] - [ INFO] foreign keys: [fk437b93bef29a651]
+2014-03-04 15:35:18 [main:20723] - [ INFO] indexes: [primary, fk437b93bef29a651]
+2014-03-04 15:35:18 [main:20851] - [ INFO] table found: emall.orderitem
+2014-03-04 15:35:18 [main:20852] - [ INFO] columns: [buyer_id, orderstatus, conveytype, product_id, count, updatetime, posttime, currentprice, id, receiveinfo, logisticsid, paytype, productillustration, orderid]
+2014-03-04 15:35:18 [main:20852] - [ INFO] foreign keys: [fk60163f61ef29a651, fk60163f61bffb9191]
+2014-03-04 15:35:18 [main:20853] - [ INFO] indexes: [fk60163f61ef29a651, primary, fk60163f61bffb9191]
+2014-03-04 15:35:18 [main:20988] - [ INFO] table found: emall.product
+2014-03-04 15:35:18 [main:20988] - [ INFO] columns: [bill, keyword, salesnum, promotionprice, price, mainimgurl, productid, description, inventory, assessnum, guarantee, producttype_id, seller_id, intime, productname]
+2014-03-04 15:35:18 [main:20988] - [ INFO] foreign keys: [fk50c664cfcd8cf4b1, fk50c664cf119c8383]
+2014-03-04 15:35:18 [main:20988] - [ INFO] indexes: [fk50c664cfcd8cf4b1, primary, fk50c664cf119c8383]
+2014-03-04 15:35:18 [main:21129] - [ INFO] table found: emall.producttype
+2014-03-04 15:35:18 [main:21129] - [ INFO] columns: [id, name, parenttypeid]
+2014-03-04 15:35:18 [main:21129] - [ INFO] foreign keys: [fka8168a9e390933f]
+2014-03-04 15:35:18 [main:21129] - [ INFO] indexes: [primary, fka8168a9e390933f]
+2014-03-04 15:35:18 [main:21244] - [ INFO] table found: emall.seller
+2014-03-04 15:35:18 [main:21244] - [ INFO] columns: [birthday, localaddr, sex, shop_id, sellerrate, truename, registertime, sellerid, postcode, password, username, email, identification, sellercredit, telnum, account, sellername, idflag]
+2014-03-04 15:35:18 [main:21244] - [ INFO] foreign keys: [fk93643b9fb4dc3263]
+2014-03-04 15:35:18 [main:21244] - [ INFO] indexes: [primary, fk93643b9fb4dc3263]
+2014-03-04 15:35:18 [main:21352] - [ INFO] table found: emall.shop
+2014-03-04 15:35:18 [main:21353] - [ INFO] columns: [shopid, evaluatenum, shopname, shopimg, shopscore]
+2014-03-04 15:35:18 [main:21353] - [ INFO] foreign keys: []
+2014-03-04 15:35:18 [main:21353] - [ INFO] indexes: [primary]
+2014-03-04 15:35:18 [main:21355] - [ INFO] table not found: td_mall_buyer
+2014-03-04 15:35:18 [main:21358] - [ INFO] table not found: td_mall_buyer
+2014-03-04 15:35:22 [main:25098] - [ INFO] schema update complete
+2014-03-04 15:35:23 [main:25393] - [ INFO] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1d1c3cd: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,BuyerDao,ProductDao,SellerDao,BuyerService,SellerService,ProductService,dataSource,entityManagerFactory,persistenceProvider,jpaVendorAdapter,jpaDialect,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-03-04 15:38:14 [main:0] - [ INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@983d95: startup date [Tue Mar 04 15:38:14 CST 2014]; root of context hierarchy
+2014-03-04 15:38:14 [main:151] - [ INFO] Loading XML bean definitions from class path resource [spring.xml]
+2014-03-04 15:38:15 [main:1825] - [ INFO] Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-03-04 15:38:16 [main:1935] - [ INFO] Hibernate Annotations 3.5.6-Final
+2014-03-04 15:38:16 [main:1960] - [ INFO] Hibernate 3.5.6-Final
+2014-03-04 15:38:16 [main:1963] - [ INFO] hibernate.properties not found
+2014-03-04 15:38:16 [main:1971] - [ INFO] Bytecode provider name : javassist
+2014-03-04 15:38:16 [main:1979] - [ INFO] using JDK 1.4 java.sql.Timestamp handling
+2014-03-04 15:38:16 [main:2323] - [ INFO] Hibernate Commons Annotations 3.2.0.Final
+2014-03-04 15:38:16 [main:2335] - [ INFO] Hibernate EntityManager 3.5.6-Final
+2014-03-04 15:38:16 [main:2380] - [ INFO] Processing PersistenceUnitInfo [
+	name: default
+	...]
+2014-03-04 15:38:16 [main:2647] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Addr
+2014-03-04 15:38:16 [main:2803] - [ INFO] Bind entity ustc.sse.water.pojo.Addr on table Addr
+2014-03-04 15:38:17 [main:2940] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Admin
+2014-03-04 15:38:17 [main:2940] - [ INFO] Bind entity ustc.sse.water.pojo.Admin on table Admin
+2014-03-04 15:38:17 [main:2942] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Advertisement
+2014-03-04 15:38:17 [main:2942] - [ INFO] Bind entity ustc.sse.water.pojo.Advertisement on table Advertisement
+2014-03-04 15:38:17 [main:2944] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.BasketItem
+2014-03-04 15:38:17 [main:2944] - [ INFO] Bind entity ustc.sse.water.pojo.BasketItem on table BasketItem
+2014-03-04 15:38:17 [main:2961] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Buyer
+2014-03-04 15:38:17 [main:2962] - [ INFO] Bind entity ustc.sse.water.pojo.Buyer on table Buyer
+2014-03-04 15:38:17 [main:3034] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Buyer1
+2014-03-04 15:38:17 [main:3035] - [ INFO] Bind entity ustc.sse.water.pojo.Buyer1 on table td_mall_buyer
+2014-03-04 15:38:17 [main:3037] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Complaint
+2014-03-04 15:38:17 [main:3037] - [ INFO] Bind entity ustc.sse.water.pojo.Complaint on table Complaint
+2014-03-04 15:38:17 [main:3050] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Evaluate
+2014-03-04 15:38:17 [main:3051] - [ INFO] Bind entity ustc.sse.water.pojo.Evaluate on table Evaluate
+2014-03-04 15:38:17 [main:3055] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Favorites
+2014-03-04 15:38:17 [main:3056] - [ INFO] Bind entity ustc.sse.water.pojo.Favorites on table Favorites
+2014-03-04 15:38:17 [main:3058] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Product
+2014-03-04 15:38:17 [main:3058] - [ INFO] Bind entity ustc.sse.water.pojo.Product on table Product
+2014-03-04 15:38:17 [main:3069] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.FruitGoods
+2014-03-04 15:38:17 [main:3070] - [ INFO] Bind entity ustc.sse.water.pojo.FruitGoods on table FruitGoods
+2014-03-04 15:38:17 [main:3116] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Image
+2014-03-04 15:38:17 [main:3117] - [ INFO] Bind entity ustc.sse.water.pojo.Image on table Image
+2014-03-04 15:38:17 [main:3119] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.OrderItem
+2014-03-04 15:38:17 [main:3119] - [ INFO] Bind entity ustc.sse.water.pojo.OrderItem on table OrderItem
+2014-03-04 15:38:17 [main:3134] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.ProductType
+2014-03-04 15:38:17 [main:3135] - [ INFO] Bind entity ustc.sse.water.pojo.ProductType on table ProductType
+2014-03-04 15:38:17 [main:3137] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Seller
+2014-03-04 15:38:17 [main:3138] - [ INFO] Bind entity ustc.sse.water.pojo.Seller on table Seller
+2014-03-04 15:38:17 [main:3145] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Shop
+2014-03-04 15:38:17 [main:3145] - [ INFO] Bind entity ustc.sse.water.pojo.Shop on table Shop
+2014-03-04 15:38:17 [main:3366] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.complaints -> Complaint
+2014-03-04 15:38:17 [main:3369] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.addrs -> Addr
+2014-03-04 15:38:17 [main:3370] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.basket -> BasketItem
+2014-03-04 15:38:17 [main:3371] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.favorites -> Favorites
+2014-03-04 15:38:17 [main:3371] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.orders -> OrderItem
+2014-03-04 15:38:17 [main:3371] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.basketItems -> BasketItem
+2014-03-04 15:38:17 [main:3371] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.images -> Image
+2014-03-04 15:38:17 [main:3372] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.orderItems -> OrderItem
+2014-03-04 15:38:17 [main:3376] - [ INFO] Mapping collection: ustc.sse.water.pojo.ProductType.childTypes -> ProductType
+2014-03-04 15:38:17 [main:3377] - [ INFO] Mapping collection: ustc.sse.water.pojo.Seller.products -> Product
+2014-03-04 15:38:17 [main:3379] - [ INFO] Hibernate Validator not found: ignoring
+2014-03-04 15:38:17 [main:3436] - [ INFO] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2014-03-04 15:38:17 [main:3448] - [ INFO] Initializing connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-03-04 15:38:17 [main:3456] - [ INFO] Using provided datasource
+2014-03-04 15:38:18 [main:4339] - [ INFO] RDBMS: MySQL, version: 5.6.14-enterprise-commercial-advanced
+2014-03-04 15:38:18 [main:4339] - [ INFO] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.24 ( Revision: ${bzr.revision-id} )
+2014-03-04 15:38:18 [main:4383] - [ INFO] Using dialect: org.hibernate.dialect.MySQL5Dialect
+2014-03-04 15:38:18 [main:4400] - [ INFO] Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+2014-03-04 15:38:18 [main:4402] - [ INFO] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2014-03-04 15:38:18 [main:4402] - [ INFO] Automatic flush during beforeCompletion(): disabled
+2014-03-04 15:38:18 [main:4403] - [ INFO] Automatic session close at end of transaction: disabled
+2014-03-04 15:38:18 [main:4403] - [ INFO] JDBC batch size: 10
+2014-03-04 15:38:18 [main:4403] - [ INFO] JDBC batch updates for versioned data: disabled
+2014-03-04 15:38:18 [main:4405] - [ INFO] Scrollable result sets: enabled
+2014-03-04 15:38:18 [main:4405] - [ INFO] JDBC3 getGeneratedKeys(): enabled
+2014-03-04 15:38:18 [main:4406] - [ INFO] JDBC result set fetch size: 18
+2014-03-04 15:38:18 [main:4407] - [ INFO] Connection release mode: auto
+2014-03-04 15:38:18 [main:4408] - [ INFO] Maximum outer join fetch depth: 3
+2014-03-04 15:38:18 [main:4408] - [ INFO] Default batch fetch size: 1
+2014-03-04 15:38:18 [main:4408] - [ INFO] Generate SQL with comments: disabled
+2014-03-04 15:38:18 [main:4408] - [ INFO] Order SQL updates by primary key: disabled
+2014-03-04 15:38:18 [main:4408] - [ INFO] Order SQL inserts for batching: disabled
+2014-03-04 15:38:18 [main:4409] - [ INFO] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2014-03-04 15:38:18 [main:4412] - [ INFO] Using ASTQueryTranslatorFactory
+2014-03-04 15:38:18 [main:4413] - [ INFO] Query language substitutions: {}
+2014-03-04 15:38:18 [main:4413] - [ INFO] JPA-QL strict compliance: enabled
+2014-03-04 15:38:18 [main:4413] - [ INFO] Second-level cache: enabled
+2014-03-04 15:38:18 [main:4413] - [ INFO] Query cache: disabled
+2014-03-04 15:38:18 [main:4413] - [ INFO] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2014-03-04 15:38:18 [main:4413] - [ INFO] Optimize cache for minimal puts: disabled
+2014-03-04 15:38:18 [main:4413] - [ INFO] Structured second-level cache entries: disabled
+2014-03-04 15:38:18 [main:4427] - [ INFO] Echoing all SQL to stdout
+2014-03-04 15:38:18 [main:4429] - [ INFO] Statistics: disabled
+2014-03-04 15:38:18 [main:4429] - [ INFO] Deleted entity synthetic identifier rollback: disabled
+2014-03-04 15:38:18 [main:4429] - [ INFO] Default entity-mode: pojo
+2014-03-04 15:38:18 [main:4429] - [ INFO] Named query checking : enabled
+2014-03-04 15:38:18 [main:4429] - [ INFO] Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+2014-03-04 15:38:18 [main:4485] - [ INFO] building session factory
+2014-03-04 15:38:19 [main:5159] - [ INFO] Not binding factory to JNDI, no JNDI name configured
+2014-03-04 15:38:19 [main:5171] - [ INFO] Running hbm2ddl schema update
+2014-03-04 15:38:19 [main:5171] - [ INFO] fetching database metadata
+2014-03-04 15:38:19 [main:5173] - [ INFO] updating schema
+2014-03-04 15:38:19 [main:5282] - [ INFO] table found: emall.addr
+2014-03-04 15:38:19 [main:5282] - [ INFO] columns: [id, blanket, flag, area, street, buyer, telnumber, postcode, receivename]
+2014-03-04 15:38:19 [main:5282] - [ INFO] foreign keys: [fk1f1011ffec641d]
+2014-03-04 15:38:19 [main:5282] - [ INFO] indexes: [primary, fk1f1011ffec641d]
+2014-03-04 15:38:19 [main:5313] - [ INFO] table found: emall.admin
+2014-03-04 15:38:19 [main:5313] - [ INFO] columns: [admin, password]
+2014-03-04 15:38:19 [main:5313] - [ INFO] foreign keys: []
+2014-03-04 15:38:19 [main:5313] - [ INFO] indexes: [primary]
+2014-03-04 15:38:19 [main:5339] - [ INFO] table found: emall.advertisement
+2014-03-04 15:38:19 [main:5339] - [ INFO] columns: [id, advertisementurl, imageurl]
+2014-03-04 15:38:19 [main:5339] - [ INFO] foreign keys: []
+2014-03-04 15:38:19 [main:5339] - [ INFO] indexes: [primary]
+2014-03-04 15:38:19 [main:5375] - [ INFO] table found: emall.basketitem
+2014-03-04 15:38:19 [main:5375] - [ INFO] columns: [buyer_id, id, addcount, product_id, productillustration]
+2014-03-04 15:38:19 [main:5375] - [ INFO] foreign keys: [fka21e3219bffb9191, fka21e3219ef29a651]
+2014-03-04 15:38:19 [main:5375] - [ INFO] indexes: [fka21e3219bffb9191, primary, fka21e3219ef29a651]
+2014-03-04 15:38:19 [main:5408] - [ INFO] table found: emall.buyer
+2014-03-04 15:38:19 [main:5408] - [ INFO] columns: [birthday, buyername, localaddr, sex, truename, registertime, buyerid, password, buyerscore, username, email, identification, telnum, account, buyercredit, buyerrate, idflag]
+2014-03-04 15:38:19 [main:5409] - [ INFO] foreign keys: []
+2014-03-04 15:38:19 [main:5409] - [ INFO] indexes: [primary]
+2014-03-04 15:38:19 [main:5442] - [ INFO] table found: emall.complaint
+2014-03-04 15:38:19 [main:5442] - [ INFO] columns: [buyer_id, content, id, orderitem_id, figure, posttime]
+2014-03-04 15:38:19 [main:5442] - [ INFO] foreign keys: [fk23d11c8b6324b71, fk23d11c8bbffb9191]
+2014-03-04 15:38:19 [main:5442] - [ INFO] indexes: [fk23d11c8b6324b71, primary, fk23d11c8bbffb9191]
+2014-03-04 15:38:19 [main:5488] - [ INFO] table found: emall.evaluate
+2014-03-04 15:38:19 [main:5488] - [ INFO] columns: [id, orderitem_id, shopevaluation, posttime, producteval]
+2014-03-04 15:38:19 [main:5488] - [ INFO] foreign keys: [fkd7f10b96324b71]
+2014-03-04 15:38:19 [main:5488] - [ INFO] indexes: [fkd7f10b96324b71, primary]
+2014-03-04 15:38:19 [main:5516] - [ INFO] table found: emall.favorites
+2014-03-04 15:38:19 [main:5516] - [ INFO] columns: [buyer_id, id, productorshop, productorshop_id]
+2014-03-04 15:38:19 [main:5516] - [ INFO] foreign keys: [fkd098a37bffb9191]
+2014-03-04 15:38:19 [main:5516] - [ INFO] indexes: [primary, fkd098a37bffb9191]
+2014-03-04 15:38:19 [main:5546] - [ INFO] table found: emall.fruitgoods
+2014-03-04 15:38:19 [main:5546] - [ INFO] columns: [fruitid, fruitlife, weight, productdate, isorganic, factoryaddr, packagestyle, storemethod, origin, additive, specifications, factoryname, factorytel, harvestmonth, ingredient]
+2014-03-04 15:38:19 [main:5546] - [ INFO] foreign keys: [fkc8f4fbc263932815]
+2014-03-04 15:38:19 [main:5547] - [ INFO] indexes: [fkc8f4fbc263932815, primary]
+2014-03-04 15:38:19 [main:5573] - [ INFO] table found: emall.image
+2014-03-04 15:38:19 [main:5573] - [ INFO] columns: [product_id, image_url, imageid]
+2014-03-04 15:38:19 [main:5573] - [ INFO] foreign keys: [fk437b93bef29a651]
+2014-03-04 15:38:19 [main:5574] - [ INFO] indexes: [primary, fk437b93bef29a651]
+2014-03-04 15:38:19 [main:5612] - [ INFO] table found: emall.orderitem
+2014-03-04 15:38:19 [main:5612] - [ INFO] columns: [buyer_id, orderstatus, conveytype, product_id, count, updatetime, posttime, currentprice, id, receiveinfo, logisticsid, paytype, productillustration, orderid]
+2014-03-04 15:38:19 [main:5612] - [ INFO] foreign keys: [fk60163f61ef29a651, fk60163f61bffb9191]
+2014-03-04 15:38:19 [main:5613] - [ INFO] indexes: [fk60163f61ef29a651, primary, fk60163f61bffb9191]
+2014-03-04 15:38:19 [main:5673] - [ INFO] table found: emall.product
+2014-03-04 15:38:19 [main:5673] - [ INFO] columns: [bill, keyword, salesnum, promotionprice, price, mainimgurl, productid, description, inventory, assessnum, guarantee, producttype_id, seller_id, intime, productname]
+2014-03-04 15:38:19 [main:5674] - [ INFO] foreign keys: [fk50c664cfcd8cf4b1, fk50c664cf119c8383]
+2014-03-04 15:38:19 [main:5674] - [ INFO] indexes: [fk50c664cfcd8cf4b1, primary, fk50c664cf119c8383]
+2014-03-04 15:38:19 [main:5713] - [ INFO] table found: emall.producttype
+2014-03-04 15:38:19 [main:5713] - [ INFO] columns: [id, name, parenttypeid]
+2014-03-04 15:38:19 [main:5713] - [ INFO] foreign keys: [fka8168a9e390933f]
+2014-03-04 15:38:19 [main:5713] - [ INFO] indexes: [primary, fka8168a9e390933f]
+2014-03-04 15:38:19 [main:5747] - [ INFO] table found: emall.seller
+2014-03-04 15:38:19 [main:5747] - [ INFO] columns: [birthday, localaddr, sex, shop_id, sellerrate, truename, registertime, sellerid, postcode, password, username, email, identification, sellercredit, telnum, account, sellername, idflag]
+2014-03-04 15:38:19 [main:5747] - [ INFO] foreign keys: [fk93643b9fb4dc3263]
+2014-03-04 15:38:19 [main:5747] - [ INFO] indexes: [primary, fk93643b9fb4dc3263]
+2014-03-04 15:38:19 [main:5778] - [ INFO] table found: emall.shop
+2014-03-04 15:38:19 [main:5778] - [ INFO] columns: [shopid, evaluatenum, shopname, shopimg, shopscore]
+2014-03-04 15:38:19 [main:5779] - [ INFO] foreign keys: []
+2014-03-04 15:38:19 [main:5779] - [ INFO] indexes: [primary]
+2014-03-04 15:38:19 [main:5858] - [ INFO] table found: emall.td_mall_buyer
+2014-03-04 15:38:19 [main:5859] - [ INFO] columns: [id, buyername, password]
+2014-03-04 15:38:19 [main:5859] - [ INFO] foreign keys: []
+2014-03-04 15:38:19 [main:5859] - [ INFO] indexes: [primary]
+2014-03-04 15:38:19 [main:5862] - [ INFO] schema update complete
+2014-03-04 15:38:20 [main:6001] - [ INFO] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@13e6226: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,BuyerDao,ProductDao,SellerDao,BuyerService,SellerService,ProductService,dataSource,entityManagerFactory,persistenceProvider,jpaVendorAdapter,jpaDialect,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-03-04 15:40:30 [main:0] - [ INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@eaf40c: startup date [Tue Mar 04 15:40:30 CST 2014]; root of context hierarchy
+2014-03-04 15:40:30 [main:172] - [ INFO] Loading XML bean definitions from class path resource [spring.xml]
+2014-03-04 15:40:31 [main:1910] - [ INFO] Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-03-04 15:40:32 [main:2002] - [ INFO] Hibernate Annotations 3.5.6-Final
+2014-03-04 15:40:32 [main:2032] - [ INFO] Hibernate 3.5.6-Final
+2014-03-04 15:40:32 [main:2035] - [ INFO] hibernate.properties not found
+2014-03-04 15:40:32 [main:2047] - [ INFO] Bytecode provider name : javassist
+2014-03-04 15:40:32 [main:2055] - [ INFO] using JDK 1.4 java.sql.Timestamp handling
+2014-03-04 15:40:32 [main:2378] - [ INFO] Hibernate Commons Annotations 3.2.0.Final
+2014-03-04 15:40:32 [main:2401] - [ INFO] Hibernate EntityManager 3.5.6-Final
+2014-03-04 15:40:32 [main:2444] - [ INFO] Processing PersistenceUnitInfo [
+	name: default
+	...]
+2014-03-04 15:40:32 [main:2744] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Addr
+2014-03-04 15:40:32 [main:2866] - [ INFO] Bind entity ustc.sse.water.pojo.Addr on table Addr
+2014-03-04 15:40:33 [main:2972] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Admin
+2014-03-04 15:40:33 [main:2975] - [ INFO] Bind entity ustc.sse.water.pojo.Admin on table Admin
+2014-03-04 15:40:33 [main:2979] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Advertisement
+2014-03-04 15:40:33 [main:2980] - [ INFO] Bind entity ustc.sse.water.pojo.Advertisement on table Advertisement
+2014-03-04 15:40:33 [main:2982] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.BasketItem
+2014-03-04 15:40:33 [main:2983] - [ INFO] Bind entity ustc.sse.water.pojo.BasketItem on table BasketItem
+2014-03-04 15:40:33 [main:3037] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Buyer
+2014-03-04 15:40:33 [main:3037] - [ INFO] Bind entity ustc.sse.water.pojo.Buyer on table Buyer
+2014-03-04 15:40:33 [main:3133] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Buyer1
+2014-03-04 15:40:33 [main:3133] - [ INFO] Bind entity ustc.sse.water.pojo.Buyer1 on table td_mall_buyer
+2014-03-04 15:40:33 [main:3135] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Complaint
+2014-03-04 15:40:33 [main:3136] - [ INFO] Bind entity ustc.sse.water.pojo.Complaint on table Complaint
+2014-03-04 15:40:33 [main:3141] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Evaluate
+2014-03-04 15:40:33 [main:3141] - [ INFO] Bind entity ustc.sse.water.pojo.Evaluate on table Evaluate
+2014-03-04 15:40:33 [main:3152] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Favorites
+2014-03-04 15:40:33 [main:3152] - [ INFO] Bind entity ustc.sse.water.pojo.Favorites on table Favorites
+2014-03-04 15:40:33 [main:3160] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Product
+2014-03-04 15:40:33 [main:3160] - [ INFO] Bind entity ustc.sse.water.pojo.Product on table Product
+2014-03-04 15:40:33 [main:3170] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.FruitGoods
+2014-03-04 15:40:33 [main:3189] - [ INFO] Bind entity ustc.sse.water.pojo.FruitGoods on table FruitGoods
+2014-03-04 15:40:33 [main:3218] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Image
+2014-03-04 15:40:33 [main:3218] - [ INFO] Bind entity ustc.sse.water.pojo.Image on table Image
+2014-03-04 15:40:33 [main:3220] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.OrderItem
+2014-03-04 15:40:33 [main:3221] - [ INFO] Bind entity ustc.sse.water.pojo.OrderItem on table OrderItem
+2014-03-04 15:40:33 [main:3230] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.ProductType
+2014-03-04 15:40:33 [main:3230] - [ INFO] Bind entity ustc.sse.water.pojo.ProductType on table ProductType
+2014-03-04 15:40:33 [main:3238] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Seller
+2014-03-04 15:40:33 [main:3238] - [ INFO] Bind entity ustc.sse.water.pojo.Seller on table Seller
+2014-03-04 15:40:33 [main:3247] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Shop
+2014-03-04 15:40:33 [main:3248] - [ INFO] Bind entity ustc.sse.water.pojo.Shop on table Shop
+2014-03-04 15:40:33 [main:3431] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.complaints -> Complaint
+2014-03-04 15:40:33 [main:3434] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.addrs -> Addr
+2014-03-04 15:40:33 [main:3436] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.basket -> BasketItem
+2014-03-04 15:40:33 [main:3436] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.favorites -> Favorites
+2014-03-04 15:40:33 [main:3436] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.orders -> OrderItem
+2014-03-04 15:40:33 [main:3437] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.basketItems -> BasketItem
+2014-03-04 15:40:33 [main:3437] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.images -> Image
+2014-03-04 15:40:33 [main:3437] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.orderItems -> OrderItem
+2014-03-04 15:40:33 [main:3442] - [ INFO] Mapping collection: ustc.sse.water.pojo.ProductType.childTypes -> ProductType
+2014-03-04 15:40:33 [main:3442] - [ INFO] Mapping collection: ustc.sse.water.pojo.Seller.products -> Product
+2014-03-04 15:40:33 [main:3446] - [ INFO] Hibernate Validator not found: ignoring
+2014-03-04 15:40:33 [main:3524] - [ INFO] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2014-03-04 15:40:33 [main:3535] - [ INFO] Initializing connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-03-04 15:40:33 [main:3542] - [ INFO] Using provided datasource
+2014-03-04 15:40:34 [main:4424] - [ INFO] RDBMS: MySQL, version: 5.6.14-enterprise-commercial-advanced
+2014-03-04 15:40:34 [main:4425] - [ INFO] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.24 ( Revision: ${bzr.revision-id} )
+2014-03-04 15:40:34 [main:4476] - [ INFO] Using dialect: org.hibernate.dialect.MySQL5Dialect
+2014-03-04 15:40:34 [main:4497] - [ INFO] Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+2014-03-04 15:40:34 [main:4508] - [ INFO] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2014-03-04 15:40:34 [main:4508] - [ INFO] Automatic flush during beforeCompletion(): disabled
+2014-03-04 15:40:34 [main:4508] - [ INFO] Automatic session close at end of transaction: disabled
+2014-03-04 15:40:34 [main:4509] - [ INFO] JDBC batch size: 10
+2014-03-04 15:40:34 [main:4509] - [ INFO] JDBC batch updates for versioned data: disabled
+2014-03-04 15:40:34 [main:4510] - [ INFO] Scrollable result sets: enabled
+2014-03-04 15:40:34 [main:4510] - [ INFO] JDBC3 getGeneratedKeys(): enabled
+2014-03-04 15:40:34 [main:4510] - [ INFO] JDBC result set fetch size: 18
+2014-03-04 15:40:34 [main:4510] - [ INFO] Connection release mode: auto
+2014-03-04 15:40:34 [main:4511] - [ INFO] Maximum outer join fetch depth: 3
+2014-03-04 15:40:34 [main:4512] - [ INFO] Default batch fetch size: 1
+2014-03-04 15:40:34 [main:4512] - [ INFO] Generate SQL with comments: disabled
+2014-03-04 15:40:34 [main:4512] - [ INFO] Order SQL updates by primary key: disabled
+2014-03-04 15:40:34 [main:4512] - [ INFO] Order SQL inserts for batching: disabled
+2014-03-04 15:40:34 [main:4512] - [ INFO] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2014-03-04 15:40:34 [main:4517] - [ INFO] Using ASTQueryTranslatorFactory
+2014-03-04 15:40:34 [main:4517] - [ INFO] Query language substitutions: {}
+2014-03-04 15:40:34 [main:4517] - [ INFO] JPA-QL strict compliance: enabled
+2014-03-04 15:40:34 [main:4517] - [ INFO] Second-level cache: enabled
+2014-03-04 15:40:34 [main:4517] - [ INFO] Query cache: disabled
+2014-03-04 15:40:34 [main:4517] - [ INFO] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2014-03-04 15:40:34 [main:4517] - [ INFO] Optimize cache for minimal puts: disabled
+2014-03-04 15:40:34 [main:4518] - [ INFO] Structured second-level cache entries: disabled
+2014-03-04 15:40:34 [main:4526] - [ INFO] Echoing all SQL to stdout
+2014-03-04 15:40:34 [main:4527] - [ INFO] Statistics: disabled
+2014-03-04 15:40:34 [main:4527] - [ INFO] Deleted entity synthetic identifier rollback: disabled
+2014-03-04 15:40:34 [main:4527] - [ INFO] Default entity-mode: pojo
+2014-03-04 15:40:34 [main:4527] - [ INFO] Named query checking : enabled
+2014-03-04 15:40:34 [main:4527] - [ INFO] Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+2014-03-04 15:40:34 [main:4625] - [ INFO] building session factory
+2014-03-04 15:40:35 [main:5326] - [ INFO] Not binding factory to JNDI, no JNDI name configured
+2014-03-04 15:40:35 [main:5336] - [ INFO] Running hbm2ddl schema update
+2014-03-04 15:40:35 [main:5336] - [ INFO] fetching database metadata
+2014-03-04 15:40:35 [main:5339] - [ INFO] updating schema
+2014-03-04 15:40:35 [main:5396] - [ INFO] table found: emall.addr
+2014-03-04 15:40:35 [main:5397] - [ INFO] columns: [id, blanket, flag, area, street, buyer, telnumber, postcode, receivename]
+2014-03-04 15:40:35 [main:5397] - [ INFO] foreign keys: [fk1f1011ffec641d]
+2014-03-04 15:40:35 [main:5397] - [ INFO] indexes: [primary, fk1f1011ffec641d]
+2014-03-04 15:40:35 [main:5428] - [ INFO] table found: emall.admin
+2014-03-04 15:40:35 [main:5428] - [ INFO] columns: [admin, password]
+2014-03-04 15:40:35 [main:5428] - [ INFO] foreign keys: []
+2014-03-04 15:40:35 [main:5428] - [ INFO] indexes: [primary]
+2014-03-04 15:40:35 [main:5457] - [ INFO] table found: emall.advertisement
+2014-03-04 15:40:35 [main:5457] - [ INFO] columns: [id, advertisementurl, imageurl]
+2014-03-04 15:40:35 [main:5457] - [ INFO] foreign keys: []
+2014-03-04 15:40:35 [main:5457] - [ INFO] indexes: [primary]
+2014-03-04 15:40:35 [main:5490] - [ INFO] table found: emall.basketitem
+2014-03-04 15:40:35 [main:5490] - [ INFO] columns: [buyer_id, id, addcount, product_id, productillustration]
+2014-03-04 15:40:35 [main:5490] - [ INFO] foreign keys: [fka21e3219bffb9191, fka21e3219ef29a651]
+2014-03-04 15:40:35 [main:5491] - [ INFO] indexes: [fka21e3219bffb9191, primary, fka21e3219ef29a651]
+2014-03-04 15:40:35 [main:5524] - [ INFO] table found: emall.buyer
+2014-03-04 15:40:35 [main:5525] - [ INFO] columns: [birthday, buyername, localaddr, sex, truename, registertime, buyerid, password, buyerscore, username, email, identification, telnum, account, buyercredit, buyerrate, idflag]
+2014-03-04 15:40:35 [main:5525] - [ INFO] foreign keys: []
+2014-03-04 15:40:35 [main:5525] - [ INFO] indexes: [primary]
+2014-03-04 15:40:35 [main:5558] - [ INFO] table found: emall.complaint
+2014-03-04 15:40:35 [main:5558] - [ INFO] columns: [buyer_id, content, id, orderitem_id, figure, posttime]
+2014-03-04 15:40:35 [main:5558] - [ INFO] foreign keys: [fk23d11c8b6324b71, fk23d11c8bbffb9191]
+2014-03-04 15:40:35 [main:5558] - [ INFO] indexes: [fk23d11c8b6324b71, primary, fk23d11c8bbffb9191]
+2014-03-04 15:40:35 [main:5589] - [ INFO] table found: emall.evaluate
+2014-03-04 15:40:35 [main:5589] - [ INFO] columns: [id, orderitem_id, shopevaluation, posttime, producteval]
+2014-03-04 15:40:35 [main:5589] - [ INFO] foreign keys: [fkd7f10b96324b71]
+2014-03-04 15:40:35 [main:5589] - [ INFO] indexes: [fkd7f10b96324b71, primary]
+2014-03-04 15:40:35 [main:5706] - [ INFO] table found: emall.favorites
+2014-03-04 15:40:35 [main:5706] - [ INFO] columns: [buyer_id, id, productorshop, productorshop_id]
+2014-03-04 15:40:35 [main:5706] - [ INFO] foreign keys: [fkd098a37bffb9191]
+2014-03-04 15:40:35 [main:5706] - [ INFO] indexes: [primary, fkd098a37bffb9191]
+2014-03-04 15:40:35 [main:5742] - [ INFO] table found: emall.fruitgoods
+2014-03-04 15:40:35 [main:5742] - [ INFO] columns: [fruitid, fruitlife, weight, productdate, isorganic, factoryaddr, packagestyle, storemethod, origin, additive, specifications, factoryname, factorytel, harvestmonth, ingredient]
+2014-03-04 15:40:35 [main:5742] - [ INFO] foreign keys: [fkc8f4fbc263932815]
+2014-03-04 15:40:35 [main:5742] - [ INFO] indexes: [fkc8f4fbc263932815, primary]
+2014-03-04 15:40:35 [main:5775] - [ INFO] table found: emall.image
+2014-03-04 15:40:35 [main:5775] - [ INFO] columns: [product_id, image_url, imageid]
+2014-03-04 15:40:35 [main:5775] - [ INFO] foreign keys: [fk437b93bef29a651]
+2014-03-04 15:40:35 [main:5775] - [ INFO] indexes: [primary, fk437b93bef29a651]
+2014-03-04 15:40:35 [main:5818] - [ INFO] table found: emall.orderitem
+2014-03-04 15:40:35 [main:5818] - [ INFO] columns: [buyer_id, orderstatus, conveytype, product_id, count, updatetime, posttime, currentprice, id, receiveinfo, logisticsid, paytype, productillustration, orderid]
+2014-03-04 15:40:35 [main:5818] - [ INFO] foreign keys: [fk60163f61ef29a651, fk60163f61bffb9191]
+2014-03-04 15:40:35 [main:5819] - [ INFO] indexes: [fk60163f61ef29a651, primary, fk60163f61bffb9191]
+2014-03-04 15:40:35 [main:5855] - [ INFO] table found: emall.product
+2014-03-04 15:40:35 [main:5855] - [ INFO] columns: [bill, keyword, salesnum, promotionprice, price, mainimgurl, productid, description, inventory, assessnum, guarantee, producttype_id, seller_id, intime, productname]
+2014-03-04 15:40:35 [main:5855] - [ INFO] foreign keys: [fk50c664cfcd8cf4b1, fk50c664cf119c8383]
+2014-03-04 15:40:35 [main:5855] - [ INFO] indexes: [fk50c664cfcd8cf4b1, primary, fk50c664cf119c8383]
+2014-03-04 15:40:35 [main:5892] - [ INFO] table found: emall.producttype
+2014-03-04 15:40:35 [main:5893] - [ INFO] columns: [id, name, parenttypeid]
+2014-03-04 15:40:35 [main:5893] - [ INFO] foreign keys: [fka8168a9e390933f]
+2014-03-04 15:40:35 [main:5893] - [ INFO] indexes: [primary, fka8168a9e390933f]
+2014-03-04 15:40:35 [main:5932] - [ INFO] table found: emall.seller
+2014-03-04 15:40:35 [main:5933] - [ INFO] columns: [birthday, localaddr, sex, shop_id, sellerrate, truename, registertime, sellerid, postcode, password, username, email, identification, sellercredit, telnum, account, sellername, idflag]
+2014-03-04 15:40:35 [main:5933] - [ INFO] foreign keys: [fk93643b9fb4dc3263]
+2014-03-04 15:40:35 [main:5933] - [ INFO] indexes: [primary, fk93643b9fb4dc3263]
+2014-03-04 15:40:36 [main:5963] - [ INFO] table found: emall.shop
+2014-03-04 15:40:36 [main:5963] - [ INFO] columns: [shopid, evaluatenum, shopname, shopimg, shopscore]
+2014-03-04 15:40:36 [main:5964] - [ INFO] foreign keys: []
+2014-03-04 15:40:36 [main:5964] - [ INFO] indexes: [primary]
+2014-03-04 15:40:36 [main:6061] - [ INFO] table found: emall.td_mall_buyer
+2014-03-04 15:40:36 [main:6061] - [ INFO] columns: [id, buyername, password]
+2014-03-04 15:40:36 [main:6061] - [ INFO] foreign keys: []
+2014-03-04 15:40:36 [main:6062] - [ INFO] indexes: [primary]
+2014-03-04 15:40:36 [main:6065] - [ INFO] schema update complete
+2014-03-04 15:40:36 [main:6220] - [ INFO] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1429cb2: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,BuyerDao,ProductDao,SellerDao,BuyerService,SellerService,ProductService,dataSource,entityManagerFactory,persistenceProvider,jpaVendorAdapter,jpaDialect,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-03-04 16:30:33 [main:0] - [ INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@b1cc87: startup date [Tue Mar 04 16:30:33 CST 2014]; root of context hierarchy
+2014-03-04 16:30:33 [main:134] - [ INFO] Loading XML bean definitions from class path resource [spring.xml]
+2014-03-04 16:30:35 [main:1957] - [ INFO] Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-03-04 16:30:35 [main:2027] - [ INFO] Hibernate Annotations 3.5.6-Final
+2014-03-04 16:30:35 [main:2054] - [ INFO] Hibernate 3.5.6-Final
+2014-03-04 16:30:35 [main:2058] - [ INFO] hibernate.properties not found
+2014-03-04 16:30:35 [main:2063] - [ INFO] Bytecode provider name : javassist
+2014-03-04 16:30:35 [main:2072] - [ INFO] using JDK 1.4 java.sql.Timestamp handling
+2014-03-04 16:30:35 [main:2277] - [ INFO] Hibernate Commons Annotations 3.2.0.Final
+2014-03-04 16:30:35 [main:2296] - [ INFO] Hibernate EntityManager 3.5.6-Final
+2014-03-04 16:30:35 [main:2344] - [ INFO] Processing PersistenceUnitInfo [
+	name: default
+	...]
+2014-03-04 16:30:36 [main:2919] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Addr
+2014-03-04 16:30:36 [main:3130] - [ INFO] Bind entity ustc.sse.water.pojo.Addr on table Addr
+2014-03-04 16:30:36 [main:3227] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Admin
+2014-03-04 16:30:36 [main:3227] - [ INFO] Bind entity ustc.sse.water.pojo.Admin on table Admin
+2014-03-04 16:30:36 [main:3228] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Advertisement
+2014-03-04 16:30:36 [main:3229] - [ INFO] Bind entity ustc.sse.water.pojo.Advertisement on table Advertisement
+2014-03-04 16:30:36 [main:3231] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.BasketItem
+2014-03-04 16:30:36 [main:3231] - [ INFO] Bind entity ustc.sse.water.pojo.BasketItem on table BasketItem
+2014-03-04 16:30:36 [main:3249] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Buyer
+2014-03-04 16:30:36 [main:3250] - [ INFO] Bind entity ustc.sse.water.pojo.Buyer on table Buyer
+2014-03-04 16:30:36 [main:3328] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Buyer1
+2014-03-04 16:30:36 [main:3328] - [ INFO] Bind entity ustc.sse.water.pojo.Buyer1 on table td_mall_buyer
+2014-03-04 16:30:36 [main:3330] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Complaint
+2014-03-04 16:30:36 [main:3331] - [ INFO] Bind entity ustc.sse.water.pojo.Complaint on table Complaint
+2014-03-04 16:30:36 [main:3336] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Evaluate
+2014-03-04 16:30:36 [main:3338] - [ INFO] Bind entity ustc.sse.water.pojo.Evaluate on table Evaluate
+2014-03-04 16:30:36 [main:3344] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Favorites
+2014-03-04 16:30:36 [main:3345] - [ INFO] Bind entity ustc.sse.water.pojo.Favorites on table Favorites
+2014-03-04 16:30:36 [main:3347] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Product
+2014-03-04 16:30:36 [main:3348] - [ INFO] Bind entity ustc.sse.water.pojo.Product on table Product
+2014-03-04 16:30:36 [main:3360] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.FruitGoods
+2014-03-04 16:30:36 [main:3362] - [ INFO] Bind entity ustc.sse.water.pojo.FruitGoods on table FruitGoods
+2014-03-04 16:30:36 [main:3384] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Image
+2014-03-04 16:30:36 [main:3384] - [ INFO] Bind entity ustc.sse.water.pojo.Image on table Image
+2014-03-04 16:30:36 [main:3388] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.OrderItem
+2014-03-04 16:30:36 [main:3390] - [ INFO] Bind entity ustc.sse.water.pojo.OrderItem on table OrderItem
+2014-03-04 16:30:36 [main:3398] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.ProductType
+2014-03-04 16:30:36 [main:3398] - [ INFO] Bind entity ustc.sse.water.pojo.ProductType on table ProductType
+2014-03-04 16:30:36 [main:3408] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Seller
+2014-03-04 16:30:36 [main:3409] - [ INFO] Bind entity ustc.sse.water.pojo.Seller on table Seller
+2014-03-04 16:30:36 [main:3418] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Shop
+2014-03-04 16:30:36 [main:3418] - [ INFO] Bind entity ustc.sse.water.pojo.Shop on table Shop
+2014-03-04 16:30:37 [main:3582] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.complaints -> Complaint
+2014-03-04 16:30:37 [main:3585] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.addrs -> Addr
+2014-03-04 16:30:37 [main:3586] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.basket -> BasketItem
+2014-03-04 16:30:37 [main:3588] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.favorites -> Favorites
+2014-03-04 16:30:37 [main:3588] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.orders -> OrderItem
+2014-03-04 16:30:37 [main:3589] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.basketItems -> BasketItem
+2014-03-04 16:30:37 [main:3589] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.images -> Image
+2014-03-04 16:30:37 [main:3589] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.orderItems -> OrderItem
+2014-03-04 16:30:37 [main:3593] - [ INFO] Mapping collection: ustc.sse.water.pojo.ProductType.childTypes -> ProductType
+2014-03-04 16:30:37 [main:3594] - [ INFO] Mapping collection: ustc.sse.water.pojo.Seller.products -> Product
+2014-03-04 16:30:37 [main:3596] - [ INFO] Hibernate Validator not found: ignoring
+2014-03-04 16:30:37 [main:3655] - [ INFO] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2014-03-04 16:30:37 [main:3664] - [ INFO] Initializing connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-03-04 16:30:37 [main:3671] - [ INFO] Using provided datasource
+2014-03-04 16:30:37 [main:4429] - [ INFO] RDBMS: MySQL, version: 5.6.14-enterprise-commercial-advanced
+2014-03-04 16:30:37 [main:4429] - [ INFO] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.24 ( Revision: ${bzr.revision-id} )
+2014-03-04 16:30:37 [main:4478] - [ INFO] Using dialect: org.hibernate.dialect.MySQL5Dialect
+2014-03-04 16:30:37 [main:4501] - [ INFO] Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+2014-03-04 16:30:37 [main:4503] - [ INFO] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2014-03-04 16:30:37 [main:4503] - [ INFO] Automatic flush during beforeCompletion(): disabled
+2014-03-04 16:30:37 [main:4503] - [ INFO] Automatic session close at end of transaction: disabled
+2014-03-04 16:30:37 [main:4504] - [ INFO] JDBC batch size: 10
+2014-03-04 16:30:37 [main:4504] - [ INFO] JDBC batch updates for versioned data: disabled
+2014-03-04 16:30:37 [main:4505] - [ INFO] Scrollable result sets: enabled
+2014-03-04 16:30:37 [main:4505] - [ INFO] JDBC3 getGeneratedKeys(): enabled
+2014-03-04 16:30:37 [main:4505] - [ INFO] JDBC result set fetch size: 18
+2014-03-04 16:30:37 [main:4505] - [ INFO] Connection release mode: auto
+2014-03-04 16:30:37 [main:4506] - [ INFO] Maximum outer join fetch depth: 3
+2014-03-04 16:30:37 [main:4506] - [ INFO] Default batch fetch size: 1
+2014-03-04 16:30:37 [main:4506] - [ INFO] Generate SQL with comments: disabled
+2014-03-04 16:30:37 [main:4506] - [ INFO] Order SQL updates by primary key: disabled
+2014-03-04 16:30:37 [main:4507] - [ INFO] Order SQL inserts for batching: disabled
+2014-03-04 16:30:37 [main:4507] - [ INFO] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2014-03-04 16:30:37 [main:4510] - [ INFO] Using ASTQueryTranslatorFactory
+2014-03-04 16:30:37 [main:4510] - [ INFO] Query language substitutions: {}
+2014-03-04 16:30:37 [main:4510] - [ INFO] JPA-QL strict compliance: enabled
+2014-03-04 16:30:37 [main:4510] - [ INFO] Second-level cache: enabled
+2014-03-04 16:30:37 [main:4510] - [ INFO] Query cache: disabled
+2014-03-04 16:30:37 [main:4511] - [ INFO] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2014-03-04 16:30:37 [main:4511] - [ INFO] Optimize cache for minimal puts: disabled
+2014-03-04 16:30:37 [main:4511] - [ INFO] Structured second-level cache entries: disabled
+2014-03-04 16:30:38 [main:4519] - [ INFO] Echoing all SQL to stdout
+2014-03-04 16:30:38 [main:4520] - [ INFO] Statistics: disabled
+2014-03-04 16:30:38 [main:4520] - [ INFO] Deleted entity synthetic identifier rollback: disabled
+2014-03-04 16:30:38 [main:4520] - [ INFO] Default entity-mode: pojo
+2014-03-04 16:30:38 [main:4520] - [ INFO] Named query checking : enabled
+2014-03-04 16:30:38 [main:4520] - [ INFO] Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+2014-03-04 16:30:38 [main:4602] - [ INFO] building session factory
+2014-03-04 16:30:38 [main:5185] - [ INFO] Not binding factory to JNDI, no JNDI name configured
+2014-03-04 16:30:38 [main:5194] - [ INFO] Running hbm2ddl schema update
+2014-03-04 16:30:38 [main:5195] - [ INFO] fetching database metadata
+2014-03-04 16:30:38 [main:5200] - [ INFO] updating schema
+2014-03-04 16:30:38 [main:5331] - [ INFO] table found: emall.addr
+2014-03-04 16:30:38 [main:5331] - [ INFO] columns: [id, blanket, flag, area, street, buyer, telnumber, postcode, receivename]
+2014-03-04 16:30:38 [main:5331] - [ INFO] foreign keys: [fk1f1011ffec641d]
+2014-03-04 16:30:38 [main:5331] - [ INFO] indexes: [primary, fk1f1011ffec641d]
+2014-03-04 16:30:38 [main:5362] - [ INFO] table found: emall.admin
+2014-03-04 16:30:38 [main:5362] - [ INFO] columns: [admin, password]
+2014-03-04 16:30:38 [main:5362] - [ INFO] foreign keys: []
+2014-03-04 16:30:38 [main:5362] - [ INFO] indexes: [primary]
+2014-03-04 16:30:38 [main:5397] - [ INFO] table found: emall.advertisement
+2014-03-04 16:30:38 [main:5397] - [ INFO] columns: [id, advertisementurl, imageurl]
+2014-03-04 16:30:38 [main:5397] - [ INFO] foreign keys: []
+2014-03-04 16:30:38 [main:5397] - [ INFO] indexes: [primary]
+2014-03-04 16:30:38 [main:5428] - [ INFO] table found: emall.basketitem
+2014-03-04 16:30:38 [main:5428] - [ INFO] columns: [buyer_id, id, addcount, product_id, productillustration]
+2014-03-04 16:30:38 [main:5428] - [ INFO] foreign keys: [fka21e3219bffb9191, fka21e3219ef29a651]
+2014-03-04 16:30:38 [main:5428] - [ INFO] indexes: [fka21e3219bffb9191, primary, fka21e3219ef29a651]
+2014-03-04 16:30:38 [main:5457] - [ INFO] table found: emall.buyer
+2014-03-04 16:30:38 [main:5457] - [ INFO] columns: [birthday, buyername, localaddr, sex, truename, registertime, buyerid, password, buyerscore, username, email, identification, telnum, account, buyercredit, buyerrate, idflag]
+2014-03-04 16:30:38 [main:5458] - [ INFO] foreign keys: []
+2014-03-04 16:30:38 [main:5458] - [ INFO] indexes: [primary]
+2014-03-04 16:30:38 [main:5488] - [ INFO] table found: emall.complaint
+2014-03-04 16:30:38 [main:5488] - [ INFO] columns: [buyer_id, content, id, orderitem_id, figure, posttime]
+2014-03-04 16:30:38 [main:5488] - [ INFO] foreign keys: [fk23d11c8b6324b71, fk23d11c8bbffb9191]
+2014-03-04 16:30:38 [main:5490] - [ INFO] indexes: [fk23d11c8b6324b71, primary, fk23d11c8bbffb9191]
+2014-03-04 16:30:39 [main:5515] - [ INFO] table found: emall.evaluate
+2014-03-04 16:30:39 [main:5515] - [ INFO] columns: [id, orderitem_id, shopevaluation, posttime, producteval]
+2014-03-04 16:30:39 [main:5515] - [ INFO] foreign keys: [fkd7f10b96324b71]
+2014-03-04 16:30:39 [main:5515] - [ INFO] indexes: [fkd7f10b96324b71, primary]
+2014-03-04 16:30:39 [main:5540] - [ INFO] table found: emall.favorites
+2014-03-04 16:30:39 [main:5540] - [ INFO] columns: [buyer_id, id, productorshop, productorshop_id]
+2014-03-04 16:30:39 [main:5540] - [ INFO] foreign keys: [fkd098a37bffb9191]
+2014-03-04 16:30:39 [main:5540] - [ INFO] indexes: [primary, fkd098a37bffb9191]
+2014-03-04 16:30:39 [main:5567] - [ INFO] table found: emall.fruitgoods
+2014-03-04 16:30:39 [main:5567] - [ INFO] columns: [fruitid, fruitlife, weight, productdate, isorganic, factoryaddr, packagestyle, storemethod, origin, additive, specifications, factoryname, factorytel, harvestmonth, ingredient]
+2014-03-04 16:30:39 [main:5567] - [ INFO] foreign keys: [fkc8f4fbc263932815]
+2014-03-04 16:30:39 [main:5568] - [ INFO] indexes: [fkc8f4fbc263932815, primary]
+2014-03-04 16:30:39 [main:5592] - [ INFO] table found: emall.image
+2014-03-04 16:30:39 [main:5592] - [ INFO] columns: [product_id, image_url, imageid]
+2014-03-04 16:30:39 [main:5592] - [ INFO] foreign keys: [fk437b93bef29a651]
+2014-03-04 16:30:39 [main:5592] - [ INFO] indexes: [primary, fk437b93bef29a651]
+2014-03-04 16:30:39 [main:5623] - [ INFO] table found: emall.orderitem
+2014-03-04 16:30:39 [main:5624] - [ INFO] columns: [buyer_id, orderstatus, conveytype, product_id, count, updatetime, posttime, currentprice, id, receiveinfo, logisticsid, paytype, productillustration, orderid]
+2014-03-04 16:30:39 [main:5624] - [ INFO] foreign keys: [fk60163f61ef29a651, fk60163f61bffb9191]
+2014-03-04 16:30:39 [main:5625] - [ INFO] indexes: [fk60163f61ef29a651, primary, fk60163f61bffb9191]
+2014-03-04 16:30:39 [main:5663] - [ INFO] table found: emall.product
+2014-03-04 16:30:39 [main:5663] - [ INFO] columns: [bill, keyword, salesnum, promotionprice, price, mainimgurl, productid, description, inventory, assessnum, guarantee, producttype_id, seller_id, intime, productname]
+2014-03-04 16:30:39 [main:5663] - [ INFO] foreign keys: [fk50c664cfcd8cf4b1, fk50c664cf119c8383]
+2014-03-04 16:30:39 [main:5663] - [ INFO] indexes: [fk50c664cfcd8cf4b1, primary, fk50c664cf119c8383]
+2014-03-04 16:30:39 [main:5699] - [ INFO] table found: emall.producttype
+2014-03-04 16:30:39 [main:5699] - [ INFO] columns: [id, name, parenttypeid]
+2014-03-04 16:30:39 [main:5699] - [ INFO] foreign keys: [fka8168a9e390933f]
+2014-03-04 16:30:39 [main:5699] - [ INFO] indexes: [primary, fka8168a9e390933f]
+2014-03-04 16:30:39 [main:5735] - [ INFO] table found: emall.seller
+2014-03-04 16:30:39 [main:5735] - [ INFO] columns: [birthday, localaddr, sex, shop_id, sellerrate, truename, registertime, sellerid, postcode, password, username, email, identification, sellercredit, telnum, account, sellername, idflag]
+2014-03-04 16:30:39 [main:5735] - [ INFO] foreign keys: [fk93643b9fb4dc3263]
+2014-03-04 16:30:39 [main:5735] - [ INFO] indexes: [primary, fk93643b9fb4dc3263]
+2014-03-04 16:30:39 [main:5759] - [ INFO] table found: emall.shop
+2014-03-04 16:30:39 [main:5759] - [ INFO] columns: [shopid, evaluatenum, shopname, shopimg, shopscore]
+2014-03-04 16:30:39 [main:5759] - [ INFO] foreign keys: []
+2014-03-04 16:30:39 [main:5759] - [ INFO] indexes: [primary]
+2014-03-04 16:30:39 [main:5784] - [ INFO] table found: emall.td_mall_buyer
+2014-03-04 16:30:39 [main:5784] - [ INFO] columns: [id, buyername, password]
+2014-03-04 16:30:39 [main:5784] - [ INFO] foreign keys: []
+2014-03-04 16:30:39 [main:5784] - [ INFO] indexes: [primary]
+2014-03-04 16:30:39 [main:5787] - [ INFO] schema update complete
+2014-03-04 16:30:39 [main:5905] - [ INFO] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1429cb2: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,BuyerDao,ProductDao,SellerDao,BuyerService,SellerService,ProductService,dataSource,entityManagerFactory,persistenceProvider,jpaVendorAdapter,jpaDialect,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-03-04 16:31:52 [main:0] - [ INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@eaf40c: startup date [Tue Mar 04 16:31:52 CST 2014]; root of context hierarchy
+2014-03-04 16:31:52 [main:167] - [ INFO] Loading XML bean definitions from class path resource [spring.xml]
+2014-03-04 16:31:53 [main:1770] - [ INFO] Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-03-04 16:31:53 [main:1860] - [ INFO] Hibernate Annotations 3.5.6-Final
+2014-03-04 16:31:53 [main:1885] - [ INFO] Hibernate 3.5.6-Final
+2014-03-04 16:31:53 [main:1888] - [ INFO] hibernate.properties not found
+2014-03-04 16:31:53 [main:1893] - [ INFO] Bytecode provider name : javassist
+2014-03-04 16:31:53 [main:1900] - [ INFO] using JDK 1.4 java.sql.Timestamp handling
+2014-03-04 16:31:54 [main:2131] - [ INFO] Hibernate Commons Annotations 3.2.0.Final
+2014-03-04 16:31:54 [main:2144] - [ INFO] Hibernate EntityManager 3.5.6-Final
+2014-03-04 16:31:54 [main:2188] - [ INFO] Processing PersistenceUnitInfo [
+	name: default
+	...]
+2014-03-04 16:31:54 [main:2480] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Addr
+2014-03-04 16:31:54 [main:2562] - [ INFO] Bind entity ustc.sse.water.pojo.Addr on table Addr
+2014-03-04 16:31:54 [main:2653] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Admin
+2014-03-04 16:31:54 [main:2653] - [ INFO] Bind entity ustc.sse.water.pojo.Admin on table Admin
+2014-03-04 16:31:54 [main:2655] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Advertisement
+2014-03-04 16:31:54 [main:2655] - [ INFO] Bind entity ustc.sse.water.pojo.Advertisement on table Advertisement
+2014-03-04 16:31:54 [main:2657] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.BasketItem
+2014-03-04 16:31:54 [main:2657] - [ INFO] Bind entity ustc.sse.water.pojo.BasketItem on table BasketItem
+2014-03-04 16:31:54 [main:2675] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Buyer
+2014-03-04 16:31:54 [main:2675] - [ INFO] Bind entity ustc.sse.water.pojo.Buyer on table Buyer
+2014-03-04 16:31:54 [main:2734] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Buyer1
+2014-03-04 16:31:54 [main:2735] - [ INFO] Bind entity ustc.sse.water.pojo.Buyer1 on table td_mall_buyer
+2014-03-04 16:31:54 [main:2737] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Complaint
+2014-03-04 16:31:54 [main:2737] - [ INFO] Bind entity ustc.sse.water.pojo.Complaint on table Complaint
+2014-03-04 16:31:54 [main:2742] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Evaluate
+2014-03-04 16:31:54 [main:2743] - [ INFO] Bind entity ustc.sse.water.pojo.Evaluate on table Evaluate
+2014-03-04 16:31:54 [main:2748] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Favorites
+2014-03-04 16:31:54 [main:2748] - [ INFO] Bind entity ustc.sse.water.pojo.Favorites on table Favorites
+2014-03-04 16:31:54 [main:2751] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Product
+2014-03-04 16:31:54 [main:2751] - [ INFO] Bind entity ustc.sse.water.pojo.Product on table Product
+2014-03-04 16:31:54 [main:2765] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.FruitGoods
+2014-03-04 16:31:54 [main:2766] - [ INFO] Bind entity ustc.sse.water.pojo.FruitGoods on table FruitGoods
+2014-03-04 16:31:54 [main:2790] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Image
+2014-03-04 16:31:54 [main:2791] - [ INFO] Bind entity ustc.sse.water.pojo.Image on table Image
+2014-03-04 16:31:54 [main:2793] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.OrderItem
+2014-03-04 16:31:54 [main:2794] - [ INFO] Bind entity ustc.sse.water.pojo.OrderItem on table OrderItem
+2014-03-04 16:31:54 [main:2807] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.ProductType
+2014-03-04 16:31:54 [main:2807] - [ INFO] Bind entity ustc.sse.water.pojo.ProductType on table ProductType
+2014-03-04 16:31:54 [main:2810] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Seller
+2014-03-04 16:31:54 [main:2811] - [ INFO] Bind entity ustc.sse.water.pojo.Seller on table Seller
+2014-03-04 16:31:54 [main:2818] - [ INFO] Binding entity from annotated class: ustc.sse.water.pojo.Shop
+2014-03-04 16:31:54 [main:2819] - [ INFO] Bind entity ustc.sse.water.pojo.Shop on table Shop
+2014-03-04 16:31:54 [main:2944] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.complaints -> Complaint
+2014-03-04 16:31:54 [main:2946] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.addrs -> Addr
+2014-03-04 16:31:54 [main:2948] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.basket -> BasketItem
+2014-03-04 16:31:54 [main:2949] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.favorites -> Favorites
+2014-03-04 16:31:54 [main:2950] - [ INFO] Mapping collection: ustc.sse.water.pojo.Buyer.orders -> OrderItem
+2014-03-04 16:31:54 [main:2950] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.basketItems -> BasketItem
+2014-03-04 16:31:54 [main:2950] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.images -> Image
+2014-03-04 16:31:54 [main:2950] - [ INFO] Mapping collection: ustc.sse.water.pojo.Product.orderItems -> OrderItem
+2014-03-04 16:31:54 [main:2955] - [ INFO] Mapping collection: ustc.sse.water.pojo.ProductType.childTypes -> ProductType
+2014-03-04 16:31:54 [main:2955] - [ INFO] Mapping collection: ustc.sse.water.pojo.Seller.products -> Product
+2014-03-04 16:31:54 [main:2958] - [ INFO] Hibernate Validator not found: ignoring
+2014-03-04 16:31:55 [main:3021] - [ INFO] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2014-03-04 16:31:55 [main:3033] - [ INFO] Initializing connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-03-04 16:31:55 [main:3045] - [ INFO] Using provided datasource
+2014-03-04 16:31:55 [main:3720] - [ INFO] RDBMS: MySQL, version: 5.6.14-enterprise-commercial-advanced
+2014-03-04 16:31:55 [main:3720] - [ INFO] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.24 ( Revision: ${bzr.revision-id} )
+2014-03-04 16:31:55 [main:3770] - [ INFO] Using dialect: org.hibernate.dialect.MySQL5Dialect
+2014-03-04 16:31:55 [main:3787] - [ INFO] Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+2014-03-04 16:31:55 [main:3789] - [ INFO] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2014-03-04 16:31:55 [main:3789] - [ INFO] Automatic flush during beforeCompletion(): disabled
+2014-03-04 16:31:55 [main:3789] - [ INFO] Automatic session close at end of transaction: disabled
+2014-03-04 16:31:55 [main:3790] - [ INFO] JDBC batch size: 10
+2014-03-04 16:31:55 [main:3790] - [ INFO] JDBC batch updates for versioned data: disabled
+2014-03-04 16:31:55 [main:3791] - [ INFO] Scrollable result sets: enabled
+2014-03-04 16:31:55 [main:3791] - [ INFO] JDBC3 getGeneratedKeys(): enabled
+2014-03-04 16:31:55 [main:3791] - [ INFO] JDBC result set fetch size: 18
+2014-03-04 16:31:55 [main:3791] - [ INFO] Connection release mode: auto
+2014-03-04 16:31:55 [main:3792] - [ INFO] Maximum outer join fetch depth: 3
+2014-03-04 16:31:55 [main:3792] - [ INFO] Default batch fetch size: 1
+2014-03-04 16:31:55 [main:3792] - [ INFO] Generate SQL with comments: disabled
+2014-03-04 16:31:55 [main:3792] - [ INFO] Order SQL updates by primary key: disabled
+2014-03-04 16:31:55 [main:3792] - [ INFO] Order SQL inserts for batching: disabled
+2014-03-04 16:31:55 [main:3792] - [ INFO] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2014-03-04 16:31:55 [main:3797] - [ INFO] Using ASTQueryTranslatorFactory
+2014-03-04 16:31:55 [main:3798] - [ INFO] Query language substitutions: {}
+2014-03-04 16:31:55 [main:3798] - [ INFO] JPA-QL strict compliance: enabled
+2014-03-04 16:31:55 [main:3798] - [ INFO] Second-level cache: enabled
+2014-03-04 16:31:55 [main:3798] - [ INFO] Query cache: disabled
+2014-03-04 16:31:55 [main:3798] - [ INFO] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2014-03-04 16:31:55 [main:3798] - [ INFO] Optimize cache for minimal puts: disabled
+2014-03-04 16:31:55 [main:3798] - [ INFO] Structured second-level cache entries: disabled
+2014-03-04 16:31:55 [main:3806] - [ INFO] Echoing all SQL to stdout
+2014-03-04 16:31:55 [main:3807] - [ INFO] Statistics: disabled
+2014-03-04 16:31:55 [main:3807] - [ INFO] Deleted entity synthetic identifier rollback: disabled
+2014-03-04 16:31:55 [main:3807] - [ INFO] Default entity-mode: pojo
+2014-03-04 16:31:55 [main:3807] - [ INFO] Named query checking : enabled
+2014-03-04 16:31:55 [main:3808] - [ INFO] Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+2014-03-04 16:31:55 [main:3862] - [ INFO] building session factory
+2014-03-04 16:31:56 [main:4457] - [ INFO] Not binding factory to JNDI, no JNDI name configured
+2014-03-04 16:31:56 [main:4469] - [ INFO] Running hbm2ddl schema update
+2014-03-04 16:31:56 [main:4470] - [ INFO] fetching database metadata
+2014-03-04 16:31:56 [main:4475] - [ INFO] updating schema
+2014-03-04 16:31:56 [main:4628] - [ INFO] table found: emall.addr
+2014-03-04 16:31:56 [main:4628] - [ INFO] columns: [id, blanket, flag, area, street, buyer, telnumber, postcode, receivename]
+2014-03-04 16:31:56 [main:4629] - [ INFO] foreign keys: [fk1f1011ffec641d]
+2014-03-04 16:31:56 [main:4629] - [ INFO] indexes: [primary, fk1f1011ffec641d]
+2014-03-04 16:31:56 [main:4662] - [ INFO] table found: emall.admin
+2014-03-04 16:31:56 [main:4662] - [ INFO] columns: [admin, password]
+2014-03-04 16:31:56 [main:4662] - [ INFO] foreign keys: []
+2014-03-04 16:31:56 [main:4662] - [ INFO] indexes: [primary]
+2014-03-04 16:31:56 [main:4693] - [ INFO] table found: emall.advertisement
+2014-03-04 16:31:56 [main:4693] - [ INFO] columns: [id, advertisementurl, imageurl]
+2014-03-04 16:31:56 [main:4693] - [ INFO] foreign keys: []
+2014-03-04 16:31:56 [main:4693] - [ INFO] indexes: [primary]
+2014-03-04 16:31:56 [main:4728] - [ INFO] table found: emall.basketitem
+2014-03-04 16:31:56 [main:4728] - [ INFO] columns: [buyer_id, id, addcount, product_id, productillustration]
+2014-03-04 16:31:56 [main:4728] - [ INFO] foreign keys: [fka21e3219bffb9191, fka21e3219ef29a651]
+2014-03-04 16:31:56 [main:4728] - [ INFO] indexes: [fka21e3219bffb9191, primary, fka21e3219ef29a651]
+2014-03-04 16:31:56 [main:4762] - [ INFO] table found: emall.buyer
+2014-03-04 16:31:56 [main:4762] - [ INFO] columns: [birthday, buyername, localaddr, sex, truename, registertime, buyerid, password, buyerscore, username, email, identification, telnum, account, buyercredit, buyerrate, idflag]
+2014-03-04 16:31:56 [main:4762] - [ INFO] foreign keys: []
+2014-03-04 16:31:56 [main:4762] - [ INFO] indexes: [primary]
+2014-03-04 16:31:56 [main:4794] - [ INFO] table found: emall.complaint
+2014-03-04 16:31:56 [main:4794] - [ INFO] columns: [buyer_id, content, id, orderitem_id, figure, posttime]
+2014-03-04 16:31:56 [main:4794] - [ INFO] foreign keys: [fk23d11c8b6324b71, fk23d11c8bbffb9191]
+2014-03-04 16:31:56 [main:4795] - [ INFO] indexes: [fk23d11c8b6324b71, primary, fk23d11c8bbffb9191]
+2014-03-04 16:31:56 [main:4823] - [ INFO] table found: emall.evaluate
+2014-03-04 16:31:56 [main:4823] - [ INFO] columns: [id, orderitem_id, shopevaluation, posttime, producteval]
+2014-03-04 16:31:56 [main:4823] - [ INFO] foreign keys: [fkd7f10b96324b71]
+2014-03-04 16:31:56 [main:4823] - [ INFO] indexes: [fkd7f10b96324b71, primary]
+2014-03-04 16:31:56 [main:4851] - [ INFO] table found: emall.favorites
+2014-03-04 16:31:56 [main:4851] - [ INFO] columns: [buyer_id, id, productorshop, productorshop_id]
+2014-03-04 16:31:56 [main:4851] - [ INFO] foreign keys: [fkd098a37bffb9191]
+2014-03-04 16:31:56 [main:4851] - [ INFO] indexes: [primary, fkd098a37bffb9191]
+2014-03-04 16:31:56 [main:4879] - [ INFO] table found: emall.fruitgoods
+2014-03-04 16:31:56 [main:4880] - [ INFO] columns: [fruitid, fruitlife, weight, productdate, isorganic, factoryaddr, packagestyle, storemethod, origin, additive, specifications, factoryname, factorytel, harvestmonth, ingredient]
+2014-03-04 16:31:56 [main:4880] - [ INFO] foreign keys: [fkc8f4fbc263932815]
+2014-03-04 16:31:56 [main:4880] - [ INFO] indexes: [fkc8f4fbc263932815, primary]
+2014-03-04 16:31:56 [main:4906] - [ INFO] table found: emall.image
+2014-03-04 16:31:56 [main:4906] - [ INFO] columns: [product_id, image_url, imageid]
+2014-03-04 16:31:56 [main:4906] - [ INFO] foreign keys: [fk437b93bef29a651]
+2014-03-04 16:31:56 [main:4906] - [ INFO] indexes: [primary, fk437b93bef29a651]
+2014-03-04 16:31:56 [main:4943] - [ INFO] table found: emall.orderitem
+2014-03-04 16:31:56 [main:4944] - [ INFO] columns: [buyer_id, orderstatus, conveytype, product_id, count, updatetime, posttime, currentprice, id, receiveinfo, logisticsid, paytype, productillustration, orderid]
+2014-03-04 16:31:56 [main:4944] - [ INFO] foreign keys: [fk60163f61ef29a651, fk60163f61bffb9191]
+2014-03-04 16:31:56 [main:4945] - [ INFO] indexes: [fk60163f61ef29a651, primary, fk60163f61bffb9191]
+2014-03-04 16:31:56 [main:4981] - [ INFO] table found: emall.product
+2014-03-04 16:31:56 [main:4982] - [ INFO] columns: [bill, keyword, salesnum, promotionprice, price, mainimgurl, productid, description, inventory, assessnum, guarantee, producttype_id, seller_id, intime, productname]
+2014-03-04 16:31:56 [main:4982] - [ INFO] foreign keys: [fk50c664cfcd8cf4b1, fk50c664cf119c8383]
+2014-03-04 16:31:56 [main:4982] - [ INFO] indexes: [fk50c664cfcd8cf4b1, primary, fk50c664cf119c8383]
+2014-03-04 16:31:57 [main:5023] - [ INFO] table found: emall.producttype
+2014-03-04 16:31:57 [main:5023] - [ INFO] columns: [id, name, parenttypeid]
+2014-03-04 16:31:57 [main:5023] - [ INFO] foreign keys: [fka8168a9e390933f]
+2014-03-04 16:31:57 [main:5023] - [ INFO] indexes: [primary, fka8168a9e390933f]
+2014-03-04 16:31:57 [main:5056] - [ INFO] table found: emall.seller
+2014-03-04 16:31:57 [main:5057] - [ INFO] columns: [birthday, localaddr, sex, shop_id, sellerrate, truename, registertime, sellerid, postcode, password, username, email, identification, sellercredit, telnum, account, sellername, idflag]
+2014-03-04 16:31:57 [main:5057] - [ INFO] foreign keys: [fk93643b9fb4dc3263]
+2014-03-04 16:31:57 [main:5057] - [ INFO] indexes: [primary, fk93643b9fb4dc3263]
+2014-03-04 16:31:57 [main:5083] - [ INFO] table found: emall.shop
+2014-03-04 16:31:57 [main:5083] - [ INFO] columns: [shopid, evaluatenum, shopname, shopimg, shopscore]
+2014-03-04 16:31:57 [main:5083] - [ INFO] foreign keys: []
+2014-03-04 16:31:57 [main:5083] - [ INFO] indexes: [primary]
+2014-03-04 16:31:57 [main:5111] - [ INFO] table found: emall.td_mall_buyer
+2014-03-04 16:31:57 [main:5111] - [ INFO] columns: [id, buyername, password]
+2014-03-04 16:31:57 [main:5111] - [ INFO] foreign keys: []
+2014-03-04 16:31:57 [main:5111] - [ INFO] indexes: [primary]
+2014-03-04 16:31:57 [main:5114] - [ INFO] schema update complete
+2014-03-04 16:31:57 [main:5244] - [ INFO] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3da850: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,BuyerDao,ProductDao,SellerDao,BuyerService,SellerService,ProductService,dataSource,entityManagerFactory,persistenceProvider,jpaVendorAdapter,jpaDialect,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy

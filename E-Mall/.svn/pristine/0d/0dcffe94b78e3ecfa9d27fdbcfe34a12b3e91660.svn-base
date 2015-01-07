@@ -1,0 +1,121 @@
+package ustc.sse.water.web.controller;
+
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.RandomAccessFile;
+import java.sql.Time;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import ustc.sse.water.pojo.Addr;
+import ustc.sse.water.pojo.Advertisement;
+import ustc.sse.water.pojo.Announcement;
+import ustc.sse.water.pojo.Buyer;
+import ustc.sse.water.service.AdminService;
+import ustc.sse.water.service.impl.AdminServiceImpl;
+
+@Controller
+@RequestMapping("/AdminController")
+public class AdminController {
+	
+	
+	private AdminService adminService;
+	
+	/**
+	 * 获取 adminService
+	 * @return adminService
+	 */
+	public AdminService getAdminService() {
+		return adminService;
+	}
+
+	/**
+	 * 设置 adminService
+	 * @param adminService adminService
+	 */
+
+	@Resource(name="AdminService")
+	public void setAdminService(AdminService adminService) {
+		this.adminService = adminService;
+	}
+	
+	//@SuppressWarnings("unchecked")
+	@RequestMapping(value="")
+	public String admin(HttpServletRequest request){
+		
+		List<Advertisement> Advertisements = this.adminService.getAdvertisements();
+		List<Announcement> Announcements = this.adminService.getAnnouncements();
+		
+		for(Announcement c : Announcements) {
+			System.out.println("AdminController   " + c.getTitle() +"  Time:" + (new Date()).toString());
+			
+		}
+
+		request.getSession().setAttribute("Advertisements", Advertisements);
+		request.getSession().setAttribute("Announcements", Announcements);
+		return "/admin/adminMgr";
+	}
+	
+	@RequestMapping(value="/addAdvertisement", method=RequestMethod.POST)
+	public String addAdvertisement(HttpServletRequest request, String imageURL, String profile) {
+		Advertisement advertisement = new Advertisement();
+		
+		advertisement.setImageURL(imageURL);
+		advertisement.setProfile(profile);
+		
+		
+		System.out.println("imageURL" + imageURL);
+		System.out.println("advertisement imageURL" + advertisement.getImageURL());
+		System.out.println("profile" + profile);
+		System.out.println("advertisement profile" + advertisement.getProfile());
+	
+		this.adminService.addAdvertisement(advertisement);
+		
+		return "redirect:";
+	}
+
+	@RequestMapping(value="/deleteAdvertisement", method=RequestMethod.POST)
+	public String deleteAdvertisement(HttpServletRequest request, String id) {
+		Advertisement advertisement = new Advertisement();
+		advertisement.setId(Long.parseLong(id));
+		
+		this.adminService.deleteAdvertisement(advertisement);
+		
+		return "redirect:";
+	}
+
+	@RequestMapping(value="/addAnnouncement", method=RequestMethod.POST)
+	public String addAnnouncement(HttpServletRequest request, String announcementTitle, String announcementContent) {
+		Announcement announcement = new Announcement();
+		
+		announcement.setTitle(announcementTitle);
+		announcement.setContent(announcementContent);
+		
+		
+		System.out.println("announcementTitle" + announcementTitle);
+		System.out.println("Announcement announcementTitle" + announcement.getTitle());
+		System.out.println("profile" + announcementContent);
+		System.out.println("Announcement profile" + announcement.getContent());
+	
+		this.adminService.addAnnouncement(announcement);
+		
+		return "redirect:";
+	}
+	
+
+	
+}

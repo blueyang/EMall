@@ -1,0 +1,46 @@
+package ustc.sse.water.dao.impl;
+
+import java.util.List;
+
+import javax.persistence.Query;
+
+import org.springframework.stereotype.Repository;
+
+import ustc.sse.water.dao.BuyerDao;
+import ustc.sse.water.pojo.Buyer;
+
+/**
+ * 买家用户的dao层实现. <br>
+ * 具体的数据库操作<br>
+ * 注意dao的注解同意同Repository
+ * <p>
+ * Copyright: Copyright (c) 2013年12月23日 下午10:15:33
+ * <p>
+ * Company: 中国科学技术大学软件学院
+ * <p>
+ * @author wangytao@mail.ustc.edu.cn
+ * @version 1.0.0
+ */
+@Repository("BuyerDao")
+public class BuyerDaoImpl extends SuperDaoImpl implements BuyerDao {
+
+	@Override
+	public void addBuyer(Buyer buyer) {
+		em.persist(buyer);
+	}
+
+	@Override
+	public Buyer findBuyer(String buyerName, String password) {
+		Query query = em.createQuery("from Buyer buyer where buyer.username=?1 and buyer.password=?2");
+		query.setParameter(1, buyerName);
+		query.setParameter(2, password);
+		@SuppressWarnings("unchecked")
+		List<Buyer> list = query.getResultList();
+		if (!list.isEmpty()) {
+			return list.get(0);
+		} else {
+			return null;
+		}
+	}
+
+}

@@ -1,0 +1,186 @@
+package ustc.sse.water.web.controller;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javassist.bytecode.Descriptor.Iterator;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import ustc.sse.water.pojo.Addr;
+import ustc.sse.water.pojo.BasketItem;
+import ustc.sse.water.pojo.Buyer;
+import ustc.sse.water.pojo.Favorites;
+import ustc.sse.water.pojo.OrderItem;
+import ustc.sse.water.pojo.Shop;
+import ustc.sse.water.service.BuyerService;
+import ustc.sse.water.service.ProductService;
+
+@Controller
+@RequestMapping("/BMgrLoader")
+public class BMgrLoader {
+	@Resource(name="BuyerService")
+	protected BuyerService buyerService;
+	
+	@Resource(name="ProductService")
+	protected ProductService productService;
+	
+	@RequestMapping("/loadHead")
+	public String loadHead(){
+		return "/buyer/topFrame";
+	}
+	
+	@RequestMapping("/loadLeft")
+	public String loadLeft(){
+		return "/buyer/left";
+	}
+	
+	@RequestMapping("/loadInfoChange")
+	public String loadInfoChange(){
+		return "/buyer/info_change";
+	}
+	
+	@SuppressWarnings("unchecked")
+	@RequestMapping("/loadCenter")
+	public String loadCenter(HttpServletRequest request){
+		Buyer buyer = (Buyer) request.getSession().getAttribute("current_user");
+		Buyer nbuyer = buyerService.findBuyerById(buyer.getBuyerID());
+		List<BasketItem> proList = new ArrayList<BasketItem>();
+		List<Shop> shops = (List<Shop>) request.getSession().getAttribute("collectShops");
+		List<OrderItem> orders = (List<OrderItem>) request.getSession().getAttribute("recentlyOrders");
+		if(buyer.getBasket() != null) {
+			int i = 0;
+			for (BasketItem item : nbuyer.getBasket()) {
+				if(i < 3){
+					proList.add(item);
+					i++;
+				} else {
+					break;
+				}
+			}
+			request.setAttribute("buyerSmallCart", proList);
+		}
+		if(shops == null) {
+			//int i = 0;
+			shops = new ArrayList<Shop>();
+			/*for (Shop shop : nbuyer.get) {
+			数据库有些问题待解决
+			//TODO	
+			}*/
+			request.getSession().setAttribute("collectShops", shops);
+		}
+		if(orders == null) {
+			
+		}
+		return "/buyer/center";
+	}
+	
+	@RequestMapping("/loadOrder")
+	public String loadOrder(HttpServletRequest request){
+		Buyer buyer = (Buyer) request.getSession().getAttribute("current_user");
+		buyer = buyerService.findBuyerById(buyer.getBuyerID());
+		Set<OrderItem> orderSet = productService.getNoPayOrders(buyer);
+		request.setAttribute("noPayOders", orderSet);
+		return "/buyer/order_page";
+	}
+	
+	@RequestMapping("/loadAlreadyBuy")
+	public String loadAlready(){
+		return "/buyer/already_buy";
+	}
+	
+	@RequestMapping("/loadPerINF")
+	public String loadPerINF(){
+		return "/buyer/personal_info";
+	}
+	
+	@RequestMapping("/loadAddr")
+	public String loadAddr(HttpServletRequest request){
+		Buyer buyer = (Buyer) request.getSession().getAttribute("current_user");
+		if(buyer != null){
+		Set<Addr> addrs = buyerService.findBuyerById(buyer.getBuyerID()).getAddrs();
+		request.setAttribute("addrs", addrs);
+		}
+		return "/buyer/address";
+	}
+	
+	@RequestMapping("/loadSecurity")
+	public String loadMainPage(){
+		return "/buyer/security_center";
+	}
+	
+	@RequestMapping("/loadComplaint")
+	public String loadComp(HttpServletRequest request) {
+		return "/buyer/complaint";
+	}
+	
+	@RequestMapping("/loadAssess")
+	public String loadAssess(HttpServletRequest request) {
+		Buyer buyer = (Buyer) request.getSession().getAttribute("current_user");
+		List<OrderItem> orders = buyerService.getAssessOrders(buyer);
+		request.setAttribute("orders", orders);
+		return "/buyer/assess";
+	}
+	
+	
+	
+	@RequestMapping("/loadConnection")
+	public String loadConnection(HttpServletRequest request) {
+		
+		Buyer buyer = (Buyer) request.getSession().getAttribute("current_user");
+		if(buyer != null){
+			List<Favorites> favoritess =  buyerService.getFavorites(buyer);
+			List<Favorites> fav_Products = new ArrayList<Favorites>();
+			List<Favorites> fav_Shops = new ArrayList<Favorites>();
+			for( Favorites f : favoritess) {
+				if (f.getProductOrShop() == 1)
+					fav_Products.add(f);
+				else
+					fav_Shops.add(f);
+			}
+			
+			request.getSession().setAttribute("fav_Products", fav_Products);
+			request.getSession().setAttribute("fav_Shops", fav_Shops);
+		}
+		return "/buyer/collection";
+	}
+	
+	@RequestMapping("/delFromFavorites")
+	public String delFromFavorites(HttpServletRequest request, HttpServletResponse response, String itemId) {
+		
+		Buyer buyer = (Buyer) request.getSession().getAttribute("current_user");
+		
+		List<Favorites> favorites =  buyerService.getFavorites(buyer);
+		for (Favorites item : favorites) {
+			boolean a = itemId.equals(Long.toString(item.getId()));
+			if(a){
+				buyerService.deleteFavorite(item);
+				break;
+			}
+		}
+		
+		return "1";
+	}
+	
+	
+	@RequestMapping("/addConnection")
+	public String addConnection(HttpServletRequest request, HttpServletResponse response, String itemId) {
+		
+		Buyer buyer = (Buyer) request.getSession().getAttribute("current_user");
+		
+		Favorites favorites = new Favorites();
+		favorites.setBuyer(buyer);
+		favorites.setProductOrShop(1);
+		
+		
+		return "1";
+	}
+	
+}

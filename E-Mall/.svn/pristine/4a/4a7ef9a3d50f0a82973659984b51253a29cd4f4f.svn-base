@@ -1,0 +1,120 @@
+package ustc.sse.water.service.impl;
+
+import java.util.List;
+import java.util.Set;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import ustc.sse.water.dao.BuyerDao;
+import ustc.sse.water.dao.ProductDao;
+import ustc.sse.water.pojo.Addr;
+import ustc.sse.water.pojo.BasketItem;
+import ustc.sse.water.pojo.Buyer;
+import ustc.sse.water.pojo.OrderItem;
+import ustc.sse.water.service.BuyerService;
+
+/**
+ * 买家业务层实现. <br>
+ * 实现处理方法,使用注解@Service
+ * <p>
+ * Copyright: Copyright (c) 2013年12月23日 下午10:17:04
+ * <p>
+ * Company: 中国科学技术大学软件学院
+ * <p>
+ * @author wangytao@mail.ustc.edu.cn
+ * @version 1.0.0
+ */
+@Transactional
+@Service("BuyerService")
+public class BuyerServiceImpl implements BuyerService{
+	
+	@Resource(name="ProductDao")
+	protected ProductDao productDao;
+
+	private BuyerDao buyerDao;
+	
+	public void addBuyer(Buyer buyer) {
+		buyerDao.addBuyer(buyer);
+	}
+	
+	public Buyer findBuyer(String name, String password){
+		Buyer buyer = buyerDao.findBuyer(name, password);
+		if(buyer != null){
+			return buyer;
+		} else {
+			return null;
+		}
+	}
+	
+	public Buyer findBuyerById(long uid) {
+		Buyer buyer = buyerDao.find(Buyer.class, uid);
+		return buyer;
+	}
+
+	public BuyerDao getBuyerDao() {
+		return buyerDao;
+	}
+
+	@Resource(name="BuyerDao")
+	public void setBuyerDao(BuyerDao buyerDao) {
+		this.buyerDao = buyerDao;
+	}
+
+	@Override
+	public void update(Buyer buyer) {
+		buyerDao.update(buyer);
+	}
+
+	@Override
+	public void saveAddr(Addr addr) {
+		buyerDao.save(addr);
+	}
+
+	@Override
+	public Addr getThePAById(String addr_select) {
+		Addr addr = buyerDao.find(Addr.class, Long.parseLong(addr_select));
+		return addr;
+	}
+
+	/**
+	 * 存入order，并更新entity，持久化到数据库
+	 */
+	@Override
+	public void saveOrders(Buyer buyer, Set<OrderItem> tempOrders) {
+		Set<OrderItem> dbOrders = buyer.getOrders();
+		if (tempOrders != null) {
+			for (OrderItem orderItem : tempOrders) {
+				dbOrders.add(orderItem);
+			}
+		}
+		buyerDao.update(buyer);
+	}
+
+	@Override
+	public void emptyMyCart(Buyer buyer) {
+		for (BasketItem item : buyer.getBasket()) {
+			productDao.delFromBasket(item);
+		}
+		buyer.setBasket(null);
+		//update(buyer);
+	}
+
+	@Override
+	public void removeItem(BasketItem item) {
+		productDao.delFromBasket(item);
+	}
+
+	@Override
+	public List<OrderItem> getNoPayOrders(Buyer buyer) {
+		return productDao.findNoPayOrder(buyer);
+	}
+
+	@Override
+	public List<OrderItem> getAssessOrders(Buyer buyer) {
+		return productDao.findAssessOrder(buyer);
+	}
+
+}

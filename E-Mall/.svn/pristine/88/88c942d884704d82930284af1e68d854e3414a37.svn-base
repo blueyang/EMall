@@ -1,0 +1,108 @@
+package ustc.sse.water.service.impl;
+
+
+
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import ustc.sse.water.dao.AdminDao;
+import ustc.sse.water.pojo.Advertisement;
+import ustc.sse.water.pojo.Announcement;
+import ustc.sse.water.service.AdminService;
+
+
+/**
+ * 卖家service实现类. <br>
+ * 类详细说明.
+ * <p>
+ * Copyright: Copyright (c) 2014年1月29日 上午10:23:32
+ * <p>
+ * Company: 中国科学技术大学软件学院
+ * <p>
+ * @author wangytao@mail.ustc.edu.cn
+ * @version 1.0.0
+ */
+@Transactional
+@Service("AdminService")
+public class AdminServiceImpl implements AdminService{
+
+	private AdminDao adminDao;
+
+	public AdminDao getAdminDao() {
+		return adminDao;
+	}
+
+	@Resource(name="AdminDao")
+	public void setAdminDao(AdminDao adminDao) {
+		this.adminDao = adminDao;
+	}
+
+
+	@Override
+	public void updateAdvertisement(Advertisement advertisement) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAdvertisement(Advertisement advertisement) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void addAdvertisement(Advertisement advertisement) {
+		// TODO Auto-generated method stub
+		adminDao.addAdvertisement(advertisement);
+	}
+
+	@Override
+	public List<Advertisement> getAdvertisements() {
+		// TODO Auto-generated method stub
+		List<Advertisement> Advertisements = adminDao.getAdvertisements();
+		
+	/*	for(Advertisement c : Advertisements) {
+			System.out.println("AdminServiceImpl   " + c.getId());
+		}*/
+
+		
+		return Advertisements;
+	}
+
+	@Override
+	public List<Announcement> getAnnouncements() {
+		// TODO Auto-generated method stub
+		List<Announcement> Announcements = adminDao.getAnnouncements();
+		return Announcements;
+	}
+
+	@Override
+	public void updateAnnouncement(Announcement announcement) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAnnouncement(Announcement announcement) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addAnnouncement(Announcement announcement) {
+		// TODO Auto-generated method stub
+		adminDao.addAnnouncement(announcement);
+	}
+
+	@Override
+	public Announcement getAnnouncement(String id) {
+		// TODO Auto-generated method stub
+		return adminDao.getAnnouncement(id);
+	}
+	
+}

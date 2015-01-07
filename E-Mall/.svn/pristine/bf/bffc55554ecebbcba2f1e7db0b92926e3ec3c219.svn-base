@@ -1,0 +1,141 @@
+<%@page import="ustc.sse.water.utils.ImgReadUtil"%>
+<%@page import="ustc.sse.water.pojo.Image"%>
+<%@page import="ustc.sse.water.constants.CommonConstant"%>
+<%@page import="ustc.sse.water.pojo.Seller"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link type="text/css" href="<%=request.getContextPath()%>/static/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/css/easyui/easyui.css">
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/css/easyui/icon.css">
+	<script type="text/javascript" src="<%=request.getContextPath()%>/static/js/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/static/js/easyui/jquery.easyui.min.js"></script>
+	<style type="text/css">
+          body {
+			  margin-left:50px;
+			  margin-bottom: 20px;
+			  }
+        </style>
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container-fluid">
+	  <div class="row-fluid">
+	    <nav class="span12">
+	      <ul class="breadcrumb">
+	        <li><font size="+2">店铺：${sessionScope.shop.shopName }</font><span class="divider"></span></li>
+	        <li>综合评分：${sessionScope.shop.shopScore }<span class="divider"></span></li>
+	      </ul>
+	    </nav>
+	  </div>
+		<div class="row-fluid">
+			<div class="span8">
+				<div>
+			     	<h3>
+			      		<p class="text-info"><strong>促销商品</strong></p>
+			      	</h3>
+		      	</div>
+	      
+			  <div class="row-fluid">
+			  	<c:if test="${!empty sessionScope.promotionGoods }">
+			  		<c:forEach var="promotion" items="${sessionScope.promotionGoods}">
+			            <div class="span3">			            	
+			            	<a class="thumbnail" onclick="window.location.href='<%=request.getContextPath()%>/SellerController/toGoodsDetail?id=${promotion.productId}'">
+			            		<img data-src="holder.js/100%x180" alt="Responsive image" 
+			      			src="<%=request.getContextPath()%>/${promotion.mainImgUrl}" 
+			      			class="img-rounded img-responsive" style="hight:200px; width:200px" >
+			            	</a>
+			            	<div class="caption"><li>${promotion.productName }</li></div>
+			            	<div class="caption"><li>￥${promotion.promotionPrice }</li></div>
+			            </div>
+		            </c:forEach>
+		        </c:if>    
+		      </div><!--/row-->
+	          
+		      <div>
+			      <h3>
+			      	<p class="text-info"><strong>新品上市</strong></p>
+			      </h3>
+		      </div>
+		      <div class="row-fluid">
+		      	<c:if test="${!empty sessionScope.newGoods }">
+		          <c:forEach var="newGood" items="${sessionScope.newGoods}">
+		           <div class="span3">
+		           	<a class="thumbnail" onclick="window.location.href='<%=request.getContextPath()%>/SellerController/toGoodsDetail?id=${newGood.productId}'">
+		           		<img data-src="holder.js/100%x180" alt="Responsive image" 
+		     			src="<%=request.getContextPath()%>/${newGood.mainImgUrl}"
+		     			class="img-rounded img-responsive" style="hight:200px; width:200px" >
+		           	</a>
+		           	<div class="caption"><li>${newGood.productName }</li></div>
+			        <div class="caption"><li>￥${newGood.price }</li></div>
+		           </div>
+		          </c:forEach>
+		        </c:if>
+		      </div><!--/row-->
+	      
+		      <div>
+			      <h3>
+			      	<p class="text-info"><strong>全部商品</strong></p>
+			      </h3>
+		      </div>		      
+		      	<c:if test="${!empty sessionScope.allGoods }">
+		          <c:forEach var="allGood" items="${sessionScope.allGoods}" varStatus="status">
+		           <div class="span3">
+		           	<a class="thumbnail" onclick="window.location.href='<%=request.getContextPath()%>/SellerController/toGoodsDetail?id=${allGood.productId}'">
+		           		<img data-src="holder.js/100%x180" alt="Responsive image" 
+		     			src="<%=request.getContextPath()%>/${allGood.mainImgUrl}"
+		     			class="img-rounded img-responsive" style="hight:200px; width:200px" >
+		           	</a>
+		           	<div class="caption"><li>${allGood.productName }</li></div>
+			        <div class="caption"><li>￥${allGood.price }</li></div>			        
+		           </div>
+		           <!-- <c:if test="${status.count%3==0 }">
+			        	<div>
+			        		<p class="text-info"><strong></strong></p>
+			        	</div>
+			        </c:if>
+			        -->
+		          </c:forEach>
+		        </c:if>
+	      </div><!-- /divspan9 -->
+	      
+	      <div class="span4">
+	      	  <div>
+			      <h3>
+			      	<p class="text-info"><strong>销量排行</strong></p>
+			      </h3>			      
+		      </div>
+		      
+			      	<c:if test="${!empty sessionScope.rankGoods }">
+			      	  <table class="table">
+			      	  	 <thead>
+			      	  		<tr class="danger">
+			      	  			<th class="danger">商品</th>
+			      	  			<th class="danger">商品名称</th>
+			      	  			<th class="danger">商品销量</th>
+			      	  		</tr>
+			      	  	 </thead>
+			      	  	 <tbody>
+			      	  		<c:forEach var="rankGood" items="${sessionScope.rankGoods}" varStatus="status">
+			      	  			<tr class="danger">
+			      	  				<td class="danger">${status.count }</td>
+			      	  				<td class="danger">${rankGood.productName }</td>
+			      	  				<td class="danger">${rankGood.salesNum }</td>
+			      	  			</tr>
+			          		</c:forEach>
+			      	  	</tbody>			          
+			          </table>
+		        	</c:if>
+		     
+	      </div><!-- /span3 -->
+	      
+	  </div><!-- /row-fluid -->
+  </div><!-- /container-fluid -->
+
+</body>
+</html>

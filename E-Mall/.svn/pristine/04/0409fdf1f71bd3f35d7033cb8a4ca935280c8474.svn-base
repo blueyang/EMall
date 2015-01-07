@@ -1,0 +1,34 @@
+package ustc.sse.water.service;
+
+
+import java.util.List;
+
+import ustc.sse.water.pojo.Advertisement;
+import ustc.sse.water.pojo.Announcement;
+import ustc.sse.water.dao.AdminDao;
+/**
+ * 管理员service类. <br>
+ * 类详细说明.
+ * <p>
+ * Copyright: Copyright (c) 2014年1月29日 上午9:22:03
+ * <p>
+ * Company: 中国科学技术大学软件学院
+ * <p>
+ * @author wangytao@mail.ustc.edu.cn
+ * @version 1.0.0
+ */
+public interface AdminService {
+	
+	public List<Advertisement> getAdvertisements();
+	public void updateAdvertisement(Advertisement advertisement);
+	public void deleteAdvertisement(Advertisement advertisement);
+	public void addAdvertisement(Advertisement advertisement);
+	
+	public List<Announcement> getAnnouncements();
+	public Announcement getAnnouncement(String id);
+	public void updateAnnouncement(Announcement announcement);
+	public void deleteAnnouncement(Announcement announcement);
+	public void addAnnouncement(Announcement announcement);
+	
+	
+}
